@@ -13,8 +13,8 @@ export default function EntryRoutes() {
 			<Route path="/adminLogin">
 				<AdminWelcome />
 			</Route>
-			<Route path="/doctorLogin">
-				<DoctorLogin />
+			<Route path="/doctorLogin" >
+				<DoctorLogin role={"doctor"} />
 			</Route>
 			<Route path="/patientLogin">
 				<PatientLogin />

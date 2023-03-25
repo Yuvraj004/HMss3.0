@@ -59,7 +59,7 @@ class GetPatientProfile extends Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.post("http://localhost:12347/editProfile", this.state, {
+			.post("http://localhost:4000/patient/editProfile", this.state, {
 				headers: headers,
 			})
 			.then((res) => {

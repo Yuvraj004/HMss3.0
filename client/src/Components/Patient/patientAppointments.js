@@ -15,8 +15,8 @@ class PatientAppointments extends Component {
 			authorization: Cookies.get("token"),
 		};
 		await axios
-			.post(
-				"http://localhost:4000/patient/patientAppointment",
+			.get(
+				`http://localhost:4000/appointment/appointmentList/`,
 				{
 					Email: Cookies.get("patientEmail"),
 				},

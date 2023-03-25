@@ -9,6 +9,7 @@ import LogIn from "../loginIn";
 import SecNavBar from "../Patient/secNavBar";
 import LoginNav from "../LoginNav";
 import DoctorRoutes from "../../Routes/doctorRoutes";
+import AddDoctorForm from "./addDoctor";
 import LoginCard from "../LoginCard";
 import jwt from "jwt-decode";
 import Cookies from "js-cookie";
@@ -40,7 +41,7 @@ class DoctorLogin extends React.Component {
 				Cookies.set("auth", jwt(res.data.token).authorized);
 				this.setState({ docredirectReq: true });
 			} else {
-				alert(res.data.message);
+				window.alert(res.data.message);
 			}
 		});
 	}
@@ -55,7 +56,7 @@ class DoctorLogin extends React.Component {
 						link="/doctorLogin"
 					/>
 					<Header msg={Cookies.get("docName")} />
-					<DoctorRoutes />
+					<DoctorRoutes role={"doctor"} />
 				</div>
 			);
 		}
@@ -69,7 +70,7 @@ class DoctorLogin extends React.Component {
 								<LoginCard src={doctor} msg="Doctor" />
 								<Col md="6" sm="12">
 									<Form className="DocForm">
-										<LogIn fun={this.handleSubmit} />
+										<LogIn fun={this.handleSubmit} role={"doctor"} />
 									</Form>
 								</Col>
 							</Row>

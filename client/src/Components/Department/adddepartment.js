@@ -56,7 +56,7 @@ class AddDepartmentForm extends React.Component {
 				<Nav tabs>
 					<NavItem>
 						<NavLink active>
-							<Link to="#">Add Department</Link>
+							<Link to="/adminLogin">Add Department</Link>
 						</NavLink>
 					</NavItem>
 					<NavItem>

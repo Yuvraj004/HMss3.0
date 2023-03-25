@@ -35,7 +35,7 @@ class BookAppointment extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.post("/bookAppointment", this.state, {
+			.post("http://localhost:4000/appointment/appointmentList", this.state, {
 				headers: headers,
 			})
 			.then((res) => {
