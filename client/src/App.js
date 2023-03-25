@@ -1,11 +1,11 @@
 import { Switch, Route, Link } from "react-router-dom";
-import { Row, Navbar, Nav, NavItem, NavbarText } from "reactstrap";
-import Body from "./Components/body";
+// import { Row, Navbar, Nav, NavItem, NavbarText } from "reactstrap";
+// import Body from "./Components/body";
 import "./App.css";
 import admin from "./assets/admin.png";
 import patient from "./assets/patient.jpg";
 import doctor from "./assets/doctor_new.png";
-import Footer from "./Components/footer";
+// import Footer from "./Components/footer";
 import EntryRoutes from "./Routes/entryRoutes";
 import PureBody from "./Components/PureBody";
 import PureFooter from "./Components/PureFooter";

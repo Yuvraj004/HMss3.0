@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { Row, Col, Form } from "reactstrap";
 import background from "../../assets/background.svg";
 import Header from "../header";
@@ -25,9 +25,9 @@ class PatientLogin extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	async handleSubmit(childEmail, childPswrd) {
+	async handleSubmit(childEmail, childPswrd) {		
 		await this.setState({ email: childEmail, password: childPswrd });
-		axios.post("http://localhost:12347/login", this.state).then((res) => {
+		axios.post("http://localhost:4000/patient/loginpatient", this.state).then((res) => {
 			console.log(res);
 			if (res.data.token) {
 				// sessionStorage.setItem("token", res.data.token);
@@ -60,7 +60,7 @@ class PatientLogin extends React.Component {
 				// 	this.setState({ patientredirectReq: true });
 			} else {
 				console.log(res);
-				alert(res.data.message);
+				window.alert(res.data.message);
 			}
 		});
 	}
@@ -102,4 +102,4 @@ class PatientLogin extends React.Component {
 		);
 	}
 }
-export default PatientLogin;
+export default withRouter(PatientLogin);

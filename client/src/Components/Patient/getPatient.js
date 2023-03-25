@@ -96,13 +96,14 @@ class GetPatient extends React.Component {
 										.filter((patient) => {
 											if (this.state.searchTerm === "") {
 												return patient;
-											} else if (
+											} 
+											else if (
 												patient.Name.toLowerCase().includes(
 													this.state.searchTerm.toLowerCase()
-												)
-											) {
+												)) {
 												return patient;
 											}
+											return patient;
 										})
 										.map((patient) => {
 											return (

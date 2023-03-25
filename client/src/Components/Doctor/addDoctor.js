@@ -1,15 +1,4 @@
-import {
-	Row,
-	Col,
-	Nav,
-	NavItem,
-	NavLink,
-	Form,
-	FormGroup,
-	Label,
-	Input,
-	Button,
-} from "reactstrap";
+import {Row,Col,Nav,NavItem,NavLink,Form,FormGroup,Label,Input,Button} from "reactstrap";
 import { Link } from "react-router-dom";
 import React from "react";
 import axios from "axios";

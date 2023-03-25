@@ -1,6 +1,7 @@
 const docModel = require("../models/docModel");
 const jwt = require("jsonwebtoken");
-const refresh = require("./adminController");
+const refreshtokens = require("../constants");
+
 exports.getDoctorList = function (req, res) {
     docModel.find({}, function (err, docs) {
         res.send(docs);
@@ -31,9 +32,9 @@ exports.deleteDoc = (req, res) => {
 exports.Login = (req, res) => {
     docModel.find({ email: req.body.email, password: req.body.password }, (err, doc) => {
         if (doc.length != 0) {
-            const token = jwt.sign({ id: doc[0].doctor_id, authorized: true, name: doc[0].doctor_name }, "secretkey", { expiresIn: '2m' })
-            const refreshtoken = jwt.sign({ id: doc[0].doctor_id, authorized: true, name: doc[0].doctor_name }, "secretkeyok")
-            refresh.refreshtokens.push(refreshtoken);
+            const token = jwt.sign({ id: doc[0].doctor_id, authorized: true, name: doc[0].doctor_name }, "secretkey", { expiresIn: '2m' });
+            const refreshtoken = jwt.sign({ id: doc[0].doctor_id, authorized: true, name: doc[0].doctor_name }, "secretkeyok");
+            refreshtokens.push(refreshtoken);
             res.header("auth-token", token).send({ "token": token });
         }
         else {

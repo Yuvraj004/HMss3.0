@@ -116,6 +116,7 @@ class GetAppointments extends React.Component {
 										) {
 											return appointment;
 										}
+										return appointment;
 									})
 									.map((appointment) => {
 										return (
@@ -127,7 +128,7 @@ class GetAppointments extends React.Component {
 												<td>{appointment.date}</td>
 												<td>{appointment.phone}</td>
 												{this.state.isOpen ? (
-													<td></td>
+													<td>Loading..!</td>
 												) : (
 													<td>
 														<Button
@@ -184,7 +185,7 @@ class GetAppointments extends React.Component {
 										);
 									})
 							) : (
-								<h1></h1>
+								<h1>Loading..!</h1>
 							)}
 						</Table>
 					</Col>

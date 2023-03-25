@@ -135,6 +135,7 @@ class GetDoctor extends React.Component {
 											) {
 												return doctor;
 											}
+											return doctor;
 										})
 										.map((doctor, index) => {
 											return (
@@ -145,7 +146,7 @@ class GetDoctor extends React.Component {
 													<td>{doctor.doctor_name}</td>
 													<td>{doctor.department}</td>
 													{this.props.msg ? (
-														<h1></h1>
+														<h1>Loading...!</h1>
 													) : (
 														<td>
 															<Button

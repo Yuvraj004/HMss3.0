@@ -12,7 +12,6 @@ import {
 	Nav,
 	Row,
 	Col,
-	InputGroupButtonDropdown,
 } from "reactstrap";
 import Cookies from "js-cookie";
 class BookAppointment extends React.Component {
@@ -36,7 +35,7 @@ class BookAppointment extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.post("http://localhost:12347/bookAppointment", this.state, {
+			.post("/bookAppointment", this.state, {
 				headers: headers,
 			})
 			.then((res) => {

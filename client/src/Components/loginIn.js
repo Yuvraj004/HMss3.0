@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, FormGroup, Row, Col, Label, Input, Button } from "reactstrap";
+import { FormGroup, Row, Col, Label, Input, Button } from "reactstrap";
 class LogIn extends React.Component {
 	constructor(props) {
 		super(props);
