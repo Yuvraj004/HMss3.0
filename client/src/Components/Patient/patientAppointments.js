@@ -14,9 +14,10 @@ class PatientAppointments extends Component {
 		const headers = {
 			authorization: Cookies.get("token"),
 		};
+		const id=Cookies.get("doctor_id")
 		await axios
 			.get(
-				`http://localhost:4000/appointment/appointmentList/`,
+				`http://localhost:4000/appointment/appointmentList/${id}`,
 				{
 					Email: Cookies.get("patientEmail"),
 				},
