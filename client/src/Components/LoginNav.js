@@ -31,5 +31,6 @@ export default function LoginNav({ msg }) {
 				</NavbarText>
 			)}
 		</Navbar>
+		
 	);
 }

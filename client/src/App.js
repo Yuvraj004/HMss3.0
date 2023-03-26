@@ -70,6 +70,7 @@ function App() {
 							src={doctor}
 							link="/doctorLogin"
 						/>
+					
 						<PureBody
 							role="Patient"
 							src={patient}

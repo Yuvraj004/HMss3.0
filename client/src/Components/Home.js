@@ -5,25 +5,27 @@ import admin from "../assets/admin.png";
 import doctor from "../assets/doctor_new.png";
 import patient from "../assets/patient.jpg";
 import UserSolid from "../assets/user-solid.svg";
-import Reactangle from "../assets/Rectangle 10 (1).png";
+import Reactangle1 from "../assets/Rectangle 10 (1).png";
+import Reactangle from "../assets/Rectangle 10.png";
+import Reactangle2 from "../assets/images.jpg";
 import Well from "../assets/Well.png";
 import Error1 from '../assets/800X534-min 1.png';
 // import Footer from "./Components/footer";
 function Home() {
     return (
         <div >
-            <nav className="flex container">
-                <section className="nav flex leftnav">
-                    <img src={Well} alt="logo" />
+            <nav className="flex container" style={{margin:10}}>
+                <section className="nav flex leftnav"style={{margin:10}} >
+                    <img src={Well} alt="logo" style={{position:'absolute',width:150,left:70}} />
                 </section>
 
-                <section className="nav">
+                <section className="nav" style={{marginTop:10,marginLeft:50}}>
                     <ul className="flex">
                         <li><a href="#">home</a></li>
                         <li><a href="#">about</a></li>
                         <li><a href="#">services</a></li>
                         <li><a href="signUp.html">signup</a></li>
-                        <img style={{ width: "10px" }} src={UserSolid} alt="" />
+                        <img style={{ width: "10px", marginRight:50}} src={UserSolid} alt="" />
                     </ul>
                 </section>
             </nav>
@@ -71,16 +73,16 @@ function Home() {
                 </div>
                 <div className="flex">
                     <div className="container">
-						<PureBody role="Admin" src={admin} link="/adminLogin" />
+						<PureBody role="Admin" src={Reactangle2} link="/adminLogin" />
 
 						<PureBody
 							role="Doctor"
-							src={doctor}
+							src={Reactangle}
 							link="/doctorLogin"
 						/>
 						<PureBody
 							role="Patient"
-							src={patient}
+							src={Reactangle1}
 							link="patientLogin"
 						/>
 					</div>
@@ -88,12 +90,11 @@ function Home() {
 
             </main>
 
-            <footer className="flex">
+            {/* <footer className="flex">
                 <div className="terms">
                     <p>terms and conditions</p>
                 </div>
-
-            </footer>
+            </footer> */}
 
         </div >
     )

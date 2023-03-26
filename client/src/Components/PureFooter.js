@@ -21,6 +21,7 @@ function PureFooter() {
 				</ul>
 			</div>
 			<div style={{ flex: "1" }}>
+				
 				<h2>Address</h2>
 				<p>H.NO 123/456</p>
 				<p>Heaven street</p>
@@ -32,6 +33,11 @@ function PureFooter() {
 					url="https://github.com/Yuvraj004"
 					fgColor="white"
 				/>
+            <footer className="flex">
+                <div className="terms">
+                    <p>terms and conditions</p>
+                </div>
+            </footer>
 			</div>
 		</div>
 	);

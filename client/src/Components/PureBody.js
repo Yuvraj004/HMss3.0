@@ -11,7 +11,7 @@ function PureBody({ role, src, link }) {
 				flex: "1",
 			}}
 		>
-			<img width="100%" height="500px" src={src} alt="Admin" />
+			<img width="80%" height="400px" src={src} alt="Admin"  />
 			<h1>{role}</h1>
 			<p>Click Below to Login</p>
 			<button
