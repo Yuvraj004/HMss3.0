@@ -364,3 +364,43 @@ footer{
     color:var(--text-color);
     padding-block: 20px;
 }
+
+.hor {
+    margin-top: 4rem;
+    position: absolute;
+    left: 45%;
+    border: none;
+    border-top: dotted;
+    width: 8%;
+    border-width: 10px;
+    border-color: #a6a6a4;
+    margin: 40px auto 40px auto;
+  }
+  .hor2 {
+    margin-top: 0;
+    position: absolute;
+    left: 46%;
+    border: none;
+    border-top: dotted;
+    width: 8%;
+    border-width: 10px;
+    border-color: #a6a6a4;
+    margin: 40px auto 40px auto;
+  }
+
+  #testimonials {
+    background-color: #b2dbf5;
+    text-align: center;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  
+  }
+  .testimonial-image {
+    width: 30%;
+    border-radius: 100%;
+    margin: 2rem;
+  }
+  .carousel-item{
+    padding: 0 7% 0 15%;
+  }

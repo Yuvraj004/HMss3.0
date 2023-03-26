@@ -40,8 +40,9 @@ function Home() {
                     <img src={Error1} alt="doctor photo" />
                 </div>
             </main>
+            <hr className='hor'/>            
             <main className="aboutsection">
-
+                
                 <div className="about container">
                     <h2>about us</h2>
                 </div>
@@ -64,15 +65,71 @@ function Home() {
                 </div>
 
             </main>
-
+            <hr className='hor2'/> 
             <main className="services">
 
                 <div className="servicestext">
                     <h2>services</h2>
                 </div>
-                <div className="flex">
+
+                <section id="testimonials">
+    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <h2>Admin</h2>
+          <img className="testimonial-image" src={Reactangle2}  link="/adminLogin"/>
+          <em>Administrator</em>
+          <div className="flex">
                     <div className="container">
-						<PureBody role="Admin" src={Reactangle2} link="/adminLogin" />
+						<PureBody
+                            link="/adminLogin" />
+                        </div>
+            </div>
+        </div>
+        <div className="carousel-item">
+          <h2 className="testimonial-text">Doctor</h2>
+          <img className="testimonial-image" src={Reactangle} />
+          <em>Doctor</em>
+          <div className="flex">
+                    <div className="container">
+						<PureBody
+                            link="/doctorLogin" />
+                        </div>
+            </div>
+        </div>
+        <div className="carousel-item">
+          <h2 className="testimonial-text">Patient</h2>
+          <img className="testimonial-image" src={Reactangle1} />
+          <em>Patient</em>
+          <div className="flex">
+                    <div className="container">
+						<PureBody
+                            link="/patientLogin" />
+                        </div>
+            </div>
+        </div>
+      </div>
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+  </section>
+
+
+                
+                {/* <div className="flex">
+                    <div className="container">
+						<PureBody
+                            role="Admin"
+                            src={Reactangle2}
+                            link="/adminLogin" />
 
 						<PureBody
 							role="Doctor"
@@ -85,7 +142,7 @@ function Home() {
 							link="patientLogin"
 						/>
 					</div>
-                </div>
+                </div> */}
 
             </main>
 
