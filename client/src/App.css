@@ -344,3 +344,26 @@ footer{
     color:var(--text-color);
     padding-block: 20px;
 }
+
+.hor {
+    margin-top: 4rem;
+    position: absolute;
+    left: 45%;
+    border: none;
+    border-top: dotted;
+    width: 8%;
+    border-width: 10px;
+    border-color: #a6a6a4;
+    margin: 40px auto 40px auto;
+  }
+  .hor2 {
+    margin-top: 0;
+    position: absolute;
+    left: 46%;
+    border: none;
+    border-top: dotted;
+    width: 8%;
+    border-width: 10px;
+    border-color: #a6a6a4;
+    margin: 40px auto 40px auto;
+  }

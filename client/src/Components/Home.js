@@ -38,8 +38,9 @@ function Home() {
                     <img src={Error1} alt="doctor photo" />
                 </div>
             </main>
+            <hr className='hor'/>            
             <main className="aboutsection">
-
+                
                 <div className="about container">
                     <h2>about us</h2>
                 </div>
@@ -62,7 +63,7 @@ function Home() {
                 </div>
 
             </main>
-
+            <hr className='hor2'/> 
             <main className="services">
 
                 <div className="servicestext">
