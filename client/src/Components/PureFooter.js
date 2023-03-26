@@ -4,8 +4,8 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { SocialIcon } from "react-social-icons";
 function PureFooter() {
 	return (
-		<div className="container footer">
-			<div style={{ flex: "1" }}>
+		<div className=" footer">
+			<div style={{ flex: "1.5" }}>
 				<h2>Contact Us</h2>
 				<ul className="list-unstyled">
 					<li>
@@ -29,22 +29,7 @@ function PureFooter() {
 			<div style={{ flex: "1" }}>
 				<SocialIcon
 					style={{ margin: "5px" }}
-					url="https://facebook.com"
-					fgColor="white"
-				/>
-				<SocialIcon
-					style={{ margin: "5px" }}
-					url="https://twitter.com"
-					fgColor="white"
-				/>
-				<SocialIcon
-					style={{ margin: "5px" }}
-					url="https://linkedin.com"
-					fgColor="white"
-				/>
-				<SocialIcon
-					style={{ margin: "5px" }}
-					url="https://github.com/sainikhil1605"
+					url="https://github.com/Yuvraj004"
 					fgColor="white"
 				/>
 			</div>

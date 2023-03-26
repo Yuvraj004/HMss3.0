@@ -9,13 +9,15 @@ import doctor from "./assets/doctor_new.png";
 import EntryRoutes from "./Routes/entryRoutes";
 import PureBody from "./Components/PureBody";
 import PureFooter from "./Components/PureFooter";
-
+import Home from "./Components/Home";
+import VacantBeds from "./Components/Hospitals/VacantBeds";
 function App() {
 	return (
 		<div className="App">
+			
 			<Switch>
 				<Route exact path="/">
-					<ul
+					{/* <ul
 						style={{
 							display: "flex",
 							flexDirection: "row",
@@ -36,6 +38,17 @@ function App() {
 						>
 							Global Hospitals
 						</li>
+						<li style={{
+								paddingTop: "10px",
+								flex: "1",
+								position: "relative",
+								left:"-10px",
+								textAlignLast:"auto"
+							}}>
+							<Link to="/vacantBeds" style={{color:"white"}} type="button" className="btn btn-primary">
+								Vacant Beds
+							</Link>
+						</li>
 						<li
 							style={{
 								paddingTop: "10px",
@@ -47,8 +60,9 @@ function App() {
 								New User? Sign Up!!
 							</Link>
 						</li>
-					</ul>
-					<div className="container">
+					</ul> */}
+					<Home/>
+					{/* <div className="container">
 						<PureBody role="Admin" src={admin} link="/adminLogin" />
 
 						<PureBody
@@ -61,11 +75,12 @@ function App() {
 							src={patient}
 							link="patientLogin"
 						/>
-					</div>
+					</div> */}
 				</Route>
+				
 				<EntryRoutes />
 			</Switch>
-			<PureFooter />
+			<PureFooter /> 
 		</div>
 	);
 }

@@ -7,6 +7,8 @@ import LoginNav from "../Components/LoginNav";
 import PatientLogin from "../Components/Patient/loginPatient";
 import doctor_login from "../assets/doctor_2.jpg";
 import SignUp from "../Components/Patient/signUp";
+import VacantBeds from "../Components/Hospitals/VacantBeds";
+import Hospitals from "../Components/Hospitals/Hospitals";
 export default function EntryRoutes() {
 	return (
 		<>
@@ -31,6 +33,12 @@ export default function EntryRoutes() {
 						<SignUp />
 					</Col>
 				</Row>
+			</Route>
+			<Route path="/vacantBeds">
+				<VacantBeds/>
+			</Route>
+			<Route path="/hospitals">
+				<Hospitals/>
 			</Route>
 		</>
 	);
