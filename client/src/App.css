@@ -368,3 +368,20 @@ footer{
     border-color: #a6a6a4;
     margin: 40px auto 40px auto;
   }
+
+  #testimonials {
+    background-color: #b2dbf5;
+    text-align: center;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  
+  }
+  .testimonial-image {
+    width: 30%;
+    border-radius: 100%;
+    margin: 2rem;
+  }
+  .carousel-item{
+    padding: 0 7% 0 15%;
+  }
