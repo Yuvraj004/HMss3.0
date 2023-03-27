@@ -183,6 +183,25 @@ a:hover{
 
 }
 
+.link{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--h1-color);
+    transform: 0.2s ease-in-out;
+    font-size: 1rem;
+    font-weight: 600; 
+}
+
+.link:hover{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    transform: 0.2s ease-in-out;
+    font-size: 1rem;
+    font-weight: 600; 
+}
+
+
 .flex{
     display: flex;
     justify-content: center;

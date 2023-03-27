@@ -14,8 +14,8 @@ import Error1 from '../assets/800X534-min 1.png';
 function Home() {
     return (
         <div >
-            <nav className="flex container" style={{margin:10}}>
-                <section className="nav flex leftnav"style={{margin:10}} >
+            <nav className="flex container" style={{margin:"10px"}}>
+                <section className="nav flex leftnav"style={{margin:"20px"}} >
                     <img src={Well} alt="logo" style={{position:'absolute',width:150,left:70}} />
                 </section>
 
