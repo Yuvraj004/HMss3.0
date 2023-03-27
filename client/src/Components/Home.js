@@ -69,16 +69,16 @@ function Home() {
             <main className="services">
 
                 <div className="servicestext">
-                    <h2>services</h2>
+                    <h2 style={{position: 'absolute', left: "50%"}}>services</h2>
                 </div>
 
                 <section id="testimonials">
-    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" >
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <h2>Admin</h2>
+          <h2 style={{position: 'absolute', left: "48%"}}><em>Administrator</em> </h2>
           <img className="testimonial-image" src={Reactangle2}  link="/adminLogin"/>
-          <em>Administrator</em>
+          {/* <em>Administrator</em> */}
           <div className="flex">
                     <div className="container">
 						<PureBody
@@ -87,9 +87,9 @@ function Home() {
             </div>
         </div>
         <div className="carousel-item">
-          <h2 className="testimonial-text">Doctor</h2>
+          <h2 className="testimonial-text" style={{textAlign: 'center'}}><em>Doctor</em></h2>
           <img className="testimonial-image" src={Reactangle} />
-          <em>Doctor</em>
+          {/* <em>Doctor</em> */}
           <div className="flex">
                     <div className="container">
 						<PureBody
@@ -98,9 +98,9 @@ function Home() {
             </div>
         </div>
         <div className="carousel-item">
-          <h2 className="testimonial-text">Patient</h2>
+          <h2 className="testimonial-text" style={{textAlign: 'center'}}><em>Patient</em></h2>
           <img className="testimonial-image" src={Reactangle1} />
-          <em>Patient</em>
+          {/* <em>Patient</em> */}
           <div className="flex">
                     <div className="container">
 						<PureBody

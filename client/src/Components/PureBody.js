@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 function PureBody({ role, src, link }) {
 	return (
 		<div
-			style={{
-				borderRight: "5px",
-				borderStyle: "solid",
-				borderColor: "ButtonFace",
-				flex: "1",
-			}}
+			// style={{
+			// 	borderRight: "5px",
+			// 	borderStyle: "solid",
+			// 	borderColor: "ButtonFace",
+			// 	flex: "1",
+			// }}
 		>
-			<img width="80%" height="400px" src={src} alt="Admin"  />
-			<h1>{role}</h1>
-			<p>Click Below to Login</p>
+			{/* <img width="80%" height="400px" src={src} />
+			<h1>{role}</h1> */}
+			<p style={{fontFamily: 'Montserrat', fontWeight: "lighter"}}>Click Below to Login</p>
 			<button
 				style={{
 					border: "0px",
