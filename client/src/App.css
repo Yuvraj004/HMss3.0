@@ -170,7 +170,7 @@ a{
     text-decoration: none;
     display: inline-block;
     color: var(--h1-color);
-    transform: 0.2s ease-in-out;
+    transform: 1.0s ease-in-out;
     font-size: 1rem;
     font-weight: 600;
 }
@@ -179,7 +179,8 @@ a:hover{
     color: var(--icon-background);
     background-color: var(--button-background);
     border-radius: 8px;
-    padding: 10px;
+    padding: 0.5rem;
+    margin: 0;
 
 }
 
@@ -208,9 +209,13 @@ a:hover{
     align-items: center;
 }
 
+/* nav - conatiner */
+.nav-cotainer {
+
+}
 
 .container{
-    max-width: 1180px;
+    max-width: 100%;
     margin-inline: auto;
     padding-inline: var(--padding-inline-block);
     margin-top: 5px;

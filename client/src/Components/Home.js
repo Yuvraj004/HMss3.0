@@ -14,13 +14,18 @@ import Error1 from '../assets/800X534-min 1.png';
 function Home() {
     return (
         <div >
+<<<<<<< Updated upstream
             <nav className="flex container" style={{margin:"10px"}}>
                 <section className="nav flex leftnav"style={{margin:"20px"}} >
+=======
+            <nav className="flex container " style={{margin:10,justifyContent : 'right',maxWidth : '100%'}}>
+                <section className="nav flex leftnav"style={{margin:10}} >
+>>>>>>> Stashed changes
                     <img src={Well} alt="logo" style={{position:'absolute',width:150,left:70}} />
                 </section>
 
                 <section className="nav" style={{marginTop:10,marginLeft:50}}>
-                    <ul className="flex">
+                    <ul className="flex"style={{height : '3rem'}}>
                         <li><a href="#">home</a></li>
                         <li><a href="#">about</a></li>
                         <li><a href="#">services</a></li>
@@ -32,12 +37,12 @@ function Home() {
             <main className="flex mains" >
                 <div className="mainleft container" style={{display:"flex",flexDirection:'column'}}>
                     <h1>CHOOSE YOUR<br/> OWN DOCTOR.</h1>
-                    <p>India’s Best Doctors and <br/> Hospitals are at Your Fingertips.</p>
+                    <p style={{textAlign : 'left'}}>India’s Best Doctors and <br/> Hospitals are at Your Fingertips.</p>
                     <button className="primary-button" href="loginPage.html">login</button>
                 </div>
 
                 <div className="mainright ">
-                    <img src={Error1} alt="doctor photo" />
+                    <img src={Error1} style={{height: '75vh'}} alt="doctor photo" />
                 </div>
             </main>
             <hr className='hor'/>            
