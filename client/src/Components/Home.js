@@ -11,6 +11,7 @@ import Reactangle2 from "../assets/images.jpg";
 import Well from "../assets/Well.png";
 import firstSlide from '../assets/firstSlide.png';
 import Departments from './Departments';
+import Contact from "./contact";
 
 import secondSlide from '../assets/secondSlide.png';
 import thirdSlide from '../assets/third slide.png';
@@ -103,6 +104,7 @@ function Home() {
 
             </div>
             <Departments />
+            <Contact/>
         </>
     )
 }

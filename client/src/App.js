@@ -9,7 +9,6 @@ import doctor from "./assets/doctor_new.png";
 import EntryRoutes from "./Routes/entryRoutes";
 import PureBody from "./Components/PureBody";
 import PureFooter from "./Components/PureFooter";
-import Contact from "./Components/contact";
 import Home from "./Components/Home";
 // import VacantBeds from "./Components/Hospitals/VacantBeds";
 function App() {
@@ -24,7 +23,7 @@ function App() {
 				</Route>
 				<EntryRoutes />
 			</Switch>
-			<Contact/>
+			
 			<PureFooter /> 
 		</div>
 	);
