@@ -9,14 +9,14 @@ function PureFooter() {
 					<div className="container">
 						<div className="row">
 
-							<div className="col-lg-3 col-md-6 footer-contact">
-								<h3>Medilab</h3>
+							<div className="col-lg-3 col-md-6 footer-contact" style={{textAlign:"start"}}>
+								<h3>GetWell</h3>
 								<p>
-									A108 Adam Street <br />
-									New York, NY 535022<br />
-									United States <br /><br />
-									<strong>Phone:</strong> +1 5589 55488 55<br />
-									<strong>Email:</strong> info@example.com<br />
+									Guru Gobind Singh <br />
+									Indraprastha University<br />
+									 Dwarka, New Delhi <br /><br />
+									<strong>Phone:</strong> +91 9999569456<br />
+									<strong>Email:</strong> yuvrajchat@gmail.com<br />
 								</p>
 							</div>
 
@@ -32,13 +32,13 @@ function PureFooter() {
 							</div>
 
 							<div className="col-lg-3 col-md-6 footer-links">
-								<h4>Our Services</h4>
-								<ul>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+								<h4 >Our Services</h4>
+								<ul >
+									<li style={{color:"whitesmoke !important"}}><i className="bx bx-chevron-right"></i> <a href="#" >Consultation</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" className="law">e-Records</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" className="law">Health Analysis</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" className="law">Emergency Help</a></li>
+									{/* <li><i className="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> */}
 								</ul>
 							</div>
 
