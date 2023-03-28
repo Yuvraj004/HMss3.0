@@ -9,6 +9,7 @@ import doctor_login from "../assets/doctor_2.jpg";
 import SignUp from "../Components/Patient/signUp";
 import VacantBeds from "../Components/Hospitals/VacantBeds";
 import Hospitals from "../Components/Hospitals/Hospitals";
+import Payment from "../Components/paymentgateway";
 export default function EntryRoutes() {
 	return (
 		<>
@@ -39,6 +40,9 @@ export default function EntryRoutes() {
 			</Route>
 			<Route path="/hospitals">
 				<Hospitals/>
+			</Route>
+			<Route path="/payment">
+				<Payment/>
 			</Route>
 		</>
 	);
