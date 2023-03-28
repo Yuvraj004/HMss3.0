@@ -96,12 +96,9 @@ class GetDoctor extends React.Component {
 					</Nav>
 				)}
 				<Row>
-					<Col className="mt-2 mr-5" sm="3">
-						{" "}
-					</Col>
 					<Col className="mt-3">
 						<Input
-							style={{ width: "50%" }}
+							style={{ display:"flex",width: "50%",alignContent:"center" }}
 							placeholder="Search..."
 							type="text"
 							onChange={(e) =>
@@ -110,7 +107,7 @@ class GetDoctor extends React.Component {
 						/>
 						<section id="doctors" className="doctors"
 						>
-							<div className="container">
+							<div className="container" style={{marginLeft:"70px"}}>
 								{typeof this.state.doctors != undefined ? (
 									this.state.doctors
 										.filter((doctor, index) => {
@@ -128,14 +125,14 @@ class GetDoctor extends React.Component {
 										.map((doctor, index) => {
 											return (
 												<div className="row">
-													<div className="col-lg-6">
+													<div className="col-lg-8">
 														<div className="member d-flex align-items-start">
 															<div className="pic"><img src={Admin} className="img-fluid" />
 															</div>
 															<div className="member-info">
 																<h4>{doctor.doctor_name}</h4>
 																<span>{doctor.department}</span>
-															<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, nam. Possimus tempora impedit eius sequi? Quia at cum magni neque.</p>
+															<p style={{fontSize:"14px"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 															</div>
 															
 															<div className="social">
@@ -166,7 +163,7 @@ class GetDoctor extends React.Component {
 											);
 										})
 								) : (
-									<h1>ok</h1>
+									<h1>Loading...!</h1>
 								)}
 							</div>
 						</section>
