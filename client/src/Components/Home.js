@@ -11,7 +11,8 @@ import Reactangle2 from "../assets/images.jpg";
 import Well from "../assets/Well.png";
 import Error1 from '../assets/800X534-min 1.png';
 import Departments from './Departments';
-import SVG from '../assets/angle-down-solid.svg'
+import SVG from '../assets/angle-down-solid.svg';
+import GUKH from '../assets/GUKH.png';
 // import Footer from "./Components/footer";
 function Home() {
     return (
@@ -27,42 +28,54 @@ function Home() {
                             <li><a href="#">home</a></li>
                             <li><a href="#">about</a></li>
                             <li><a href="#">services</a></li>
-                           
-                            <div class="dropdown" style={{alignItems: 'center', justifyContent: 'center'}}>
-   <p className=' login-dropdown' style={{marginTop : 20, fontSize: 23}} > Login</p>
-   {/* <img src={SVG} style = {{marginTop: -40}} id="drop-svg"/> */}
-  <div class="dropdown-content">
-    <a href="/patientLogin">For Patients</a>
-    <a href="/doctorLogin">For Doctors</a>
-    <a href="/adminlogin">For Admin</a>
-  </div>
-</div>   
-<li><a href="signUp.html">signup</a></li>
+                            <li><a href="signUp.html">signup</a></li>
+                            <div className="dropdown">
+                                <p className='flex' > Login</p>
+                                <img src={SVG} id="drop-svg" />
+                                <div className="dropdown-content">
+                                    <a href="#">For Patients</a>
+                                    <a href="#">For Doctors</a>
+                                    <a href="#">For Admin</a>
+                                </div>
+                            </div>
                         </ul>
-                    
 
- 
 
                     </section>
                 </nav>
+                <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner" style={{color:"black"}}>
+                        <div className="carousel-item active">
+                            <img className='d-block w-100' src={Error1} style={{ height: '75vh' }} alt="doctor photo" />
+                            <div className="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column',color:"black" }}>
+                                <h1>CHOOSE YOUR<br /> OWN DOCTOR.</h1>
+                                <p style={{ textAlign: 'center' }}>India’s Best Doctors and <br /> Hospitals are at Your Fingertips.</p>
+                                <Link to="/patientLogin">
+                                    <button className="primary-button">login</button>
+                                </Link>
 
-
-               
-                <main className="flex mains" >
-                    
-                    <div className="mainleft container" style={{ display: "flex", flexDirection: 'column' , backgroundColor: 'transparent',borderColor: 'transparent' }}>
-                        <h1>CHOOSE YOUR<br /> OWN DOCTOR.</h1>
-                        <p style={{ textAlign: 'left' }}>India’s Best Doctors and <br /> Hospitals are at Your Fingertips.</p>
-                        <Link to ="/patientLogin"><button className="primary-button">login</button></Link>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                        <img className='d-block w-100' src={GUKH} style={{ height: '75vh' }} alt="doctor photo" />
+                            <div class="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column',color:"black" }}>
+                                <h5>Get first 5 Doctor Appointments for free</h5>
+                                <p>After that Charge of 100 Rupees per Appointment</p>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <img className='d-block w-100' src={Error1} style={{ height: '75vh' }} alt="doctor photo" />
+                        </div>
                     </div>
-
-                    <div className="mainright ">
-                        <img src={Error1} style={{ height: '75vh' }} alt="doctor photo" />
-                    </div>
-                </main>
-
-
-
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style={{color:"black"}}>
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style={{color:"black"}}>
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <hr className='hor' />
                 <main className="aboutsection">
 
@@ -89,7 +102,7 @@ function Home() {
 
                 </main>
                 <hr className='hor2' />
-                 
+
             </div>
             <Departments />
         </>
