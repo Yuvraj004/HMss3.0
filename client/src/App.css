@@ -55,8 +55,8 @@ li :active {
   background-color: rgb(144, 144, 221);
   color: white;
   } */
-.nav-link {
-  color: white;
+.nav-link:hover {
+  color: rgb(180, 51, 154);
 }
 a {
   list-style: none;

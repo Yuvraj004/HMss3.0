@@ -1,33 +1,32 @@
 import React from 'react'
-
+import Cardio from '../assets/cardiology.jpg'
 function Departments() {
     return (
         <div>
             <section id="departments" className="departments">
                 <div className="Departcontainer">
 
-                    <div className="section-title">
-                        <h2>Departments</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <div className="section-title" style={{marginBlock:30}}>
+                        <h2 style={{marginBlock:20}}>Departments</h2>
                     </div>
 
                     <div className="row gy-4">
                         <div className="col-lg-3">
                             <ul className="nav nav-tabs flex-column">
                                 <li className="nav-item">
-                                    <a className="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+                                    <a className="nav-link active show" data-bs-toggle="tab" href="#tab-1" style={{color:"black"}}>Cardiology</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-2" style={{color:"black"}}>Neurology</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatology</a>
+                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-3" style={{color:"black"}}>Hepatology</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-4" style={{color:"black"}}>Pediatrics</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+                                    <a className="nav-link" data-bs-toggle="tab" href="#tab-5" style={{color:"black"}}>Eye Care</a>
                                 </li>
                             </ul>
                         </div>
@@ -35,13 +34,13 @@ function Departments() {
                             <div className="tab-content">
                                 <div className="tab-pane active show" id="tab-1">
                                     <div className="row gy-4">
-                                        <div className="col-lg-8 details order-2 order-lg-1">
-                                            <h3>Cardiology</h3>
-                                            <p className="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                                            <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                                        <div className="col-lg-8 details order-2 order-lg-1" style={{textAlign:"start"}}>
+                                            <h3 style={{marginBlock:20}}>Cardiology</h3>
+                                            
+                                            <p style={{marginBlock:20}}>Cardiology is a branch of medicine that deals with disorders of the heart and the cardiovascular system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease and electrophysiology.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
-                                            <img src="assets/img/departments-1.jpg" alt="" className="img-fluid"/>
+                                            <img src={Cardio} alt="" className="img-fluid"/>
                                         </div>
                                     </div>
                                 </div>
