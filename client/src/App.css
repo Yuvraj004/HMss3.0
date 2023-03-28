@@ -399,7 +399,7 @@ footer {
   margin: 3rem;
 }
 .carousel-item {
-  padding: 0 7% 0 15%;
+  /* padding: 0 5% 0 5%; */
 }
 
 /* home page*/
@@ -533,6 +533,19 @@ label {
 span.price {
   float: right;
   color: grey;
+}
+.btn-front{
+  position: relative;
+  bottom: 5rem;
+  left: -35rem;
+  background-color: 	#F16767;
+  border-radius: 20px;
+  border: none;
+}
+.btn-front:hover{
+  background-color: #F5E9CF;
+  color: #4D455D;
+   
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */

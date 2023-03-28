@@ -50,19 +50,19 @@ function Home() {
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner" style={{ color: "black" }}>
                         <div className="carousel-item active">
-                            <img className='d-block w-100' src={firstSlide} style={{ height: '75vh' }} alt="doctor photo" />
+                            <img className='d-block w-100' src={firstSlide} style={{ height: '85vh' }} alt="doctor photo" />
                             <div className="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column', color: "black" }}>
                                 <Link to="/patientLogin" style={{align:'left'}}>
-                                    <button className="primary-button">login</button>
+                                    <button className="primary-button btn-front">login</button>
                                 </Link>
 
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img className='d-block w-100' src={secondSlide} style={{ height: '75vh' }} alt="doctor photo" />
+                            <img className='d-block w-100' src={secondSlide} style={{ height: '85vh' }} alt="doctor photo" />
                         </div>
                         <div className="carousel-item">
-                            <img className='d-block w-100' src={thirdSlide} style={{ height: '75vh' }} alt="doctor photo" />
+                            <img className='d-block w-100' src={thirdSlide} style={{ height: '85vh' }} alt="doctor photo" />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style={{ color: "black" }}>
