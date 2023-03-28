@@ -17,26 +17,27 @@ function Home() {
     return (
         <>
             <div >
-                <nav className="flex container " style={{ margin: 10, justifyContent: 'right', maxWidth: '100%' }}>
+                <nav className="flex container " style={{ margin: 10, justifyContent: 'right', maxWidth: '100%', backgroundColor: 'transparent',borderColor: 'transparent' }}>
                     <section className="nav flex leftnav" style={{ margin: 10 }} >
                         <img src={Well} alt="logo" style={{ position: 'absolute', width: 150, left: 70 }} />
                     </section>
 
-                    <section className="nav" style={{ marginTop: 10, marginLeft: 50 }}>
+                    <section className="nav" style={{ marginTop: 10, marginLeft: 50,backgroundColor:'transparent', borderColor: 'transparent' }}>
                         <ul className="flex" style={{ height: '3rem' }}>
                             <li><a href="#">home</a></li>
                             <li><a href="#">about</a></li>
                             <li><a href="#">services</a></li>
-                            <li><a href="signUp.html">signup</a></li>
-                            <div class="dropdown">
-   <p className='flex' > Login</p>
-   <img src={SVG} id="drop-svg"/>
+                           
+                            <div class="dropdown" style={{alignItems: 'center', justifyContent: 'center'}}>
+   <p className=' login-dropdown' style={{marginTop : 20, fontSize: 23}} > Login</p>
+   {/* <img src={SVG} style = {{marginTop: -40}} id="drop-svg"/> */}
   <div class="dropdown-content">
-    <a href="#">For Patients</a>
-    <a href="#">For Doctors</a>
-    <a href="#">For Admin</a>
+    <a href="/patientLogin">For Patients</a>
+    <a href="/doctorLogin">For Doctors</a>
+    <a href="/adminlogin">For Admin</a>
   </div>
 </div>   
+<li><a href="signUp.html">signup</a></li>
                         </ul>
                     
 
@@ -44,8 +45,12 @@ function Home() {
 
                     </section>
                 </nav>
+
+
+               
                 <main className="flex mains" >
-                    <div className="mainleft container" style={{ display: "flex", flexDirection: 'column' }}>
+                    
+                    <div className="mainleft container" style={{ display: "flex", flexDirection: 'column' , backgroundColor: 'transparent',borderColor: 'transparent' }}>
                         <h1>CHOOSE YOUR<br /> OWN DOCTOR.</h1>
                         <p style={{ textAlign: 'left' }}>India’s Best Doctors and <br /> Hospitals are at Your Fingertips.</p>
                         <Link to ="/patientLogin"><button className="primary-button">login</button></Link>
@@ -55,6 +60,9 @@ function Home() {
                         <img src={Error1} style={{ height: '75vh' }} alt="doctor photo" />
                     </div>
                 </main>
+
+
+
                 <hr className='hor' />
                 <main className="aboutsection">
 
