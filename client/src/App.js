@@ -11,7 +11,7 @@ import PureBody from "./Components/PureBody";
 import PureFooter from "./Components/PureFooter";
 import Contact from "./Components/contact";
 import Home from "./Components/Home";
-import VacantBeds from "./Components/Hospitals/VacantBeds";
+// import VacantBeds from "./Components/Hospitals/VacantBeds";
 function App() {
 	return (
 		<div className="App">
@@ -20,20 +20,7 @@ function App() {
 				<Route exact path="/">
 					<Home/>
 					{/* <div className="container">
-						<PureBody role="Admin" src={admin} link="/adminLogin" />
-
-						<PureBody
-							role="Doctor"
-							src={doctor}
-							link="/doctorLogin"
-						/>
-					
-						<PureBody
-							role="Patient"
-							src={patient}
-							link="patientLogin"
-						/>
-					</div> */}
+						<PureBody role="Admin" src={admin} link="/adminLogin" /> */}
 				</Route>
 				<EntryRoutes />
 			</Switch>

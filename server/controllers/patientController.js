@@ -38,8 +38,8 @@ exports.deletePatient = (req, res) => {
 }
 exports.login = async(req, res) => {
     patientModel.findOne({ email: req.body.email }, async (err, doc) => {
-        // console.log(doc);
-        if (doc.length != 0) {
+        console.log(doc);
+        if (doc) {
             const token = await jwt.sign({ id: doc._id, authorized: true, name: doc.patient_name }, "secretkey", { expiresIn: '2m' })
             const refreshtoken = jwt.sign({ id: doc._id, authorized: true, name: doc.patient_name }, "secretkeyok");
             // console.log(refreshtokens,refreshtoken);
