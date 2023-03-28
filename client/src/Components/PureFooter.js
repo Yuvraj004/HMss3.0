@@ -23,21 +23,21 @@ function PureFooter() {
 							<div className="col-lg-2 col-md-6 footer-links">
 								<h4>Useful Links</h4>
 								<ul>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>Home</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>About us</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>Services</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>Terms of service</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>Privacy policy</a></li>
 								</ul>
 							</div>
 
 							<div className="col-lg-3 col-md-6 footer-links">
 								<h4 >Our Services</h4>
 								<ul >
-									<li style={{color:"whitesmoke !important"}}><i className="bx bx-chevron-right"></i> <a href="#" >Consultation</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#" className="law">e-Records</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#" className="law">Health Analysis</a></li>
-									<li><i className="bx bx-chevron-right"></i> <a href="#" className="law">Emergency Help</a></li>
+									<li ><i className="bx bx-chevron-right"></i> <a href="#" id="mainbtn" style={{color:"whitesmoke"}} >Consultation</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>e-Records</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>Health Analysis</a></li>
+									<li><i className="bx bx-chevron-right"></i> <a href="#" style={{color:"whitesmoke"}}>Emergency Help</a></li>
 									{/* <li><i className="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> */}
 								</ul>
 							</div>
