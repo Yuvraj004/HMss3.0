@@ -20,9 +20,11 @@ li :active {
   pointer-events: none;
 }
 .header {
-  background-color: #242526;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 0;
+  /* height: 50px; */
+  
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
