@@ -83,9 +83,7 @@ function Departments() {
                                 <div className="tab-pane" id="tab-5">
                                     <div className="row gy-4">
                                         <div className="col-lg-8 details order-2 order-lg-1">
-                                            <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                                            <p className="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                                            <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                                            <p>Everyone needs to have their eyesight tested to check for vision and eye problems. Children usually have vision screening in school or at their health care provider's office during a checkup. Adults may also get vision screenings during their checkups. But many adults need more than a vision screening. They need a comprehensive dilated eye exam.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-5.jpg" alt="" className="img-fluid"/>
