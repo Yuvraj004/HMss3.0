@@ -47,9 +47,9 @@ function Departments() {
                                 <div className="tab-pane" id="tab-2">
                                     <div className="row gy-4">
                                         <div className="col-lg-8 details order-2 order-lg-1">
-                                            <h3>Et blanditiis nemo veritatis excepturi</h3>
-                                            <p className="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                                            <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                                        <h3 style={{marginBlock:20}}>Neurology</h3>
+ 
+                                            <p>Neurology, medical specialty concerned with the nervous system and its functional or organic disorders. Neurologists diagnose and treat diseases and disorders of the brain, spinal cord, and nerves.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-2.jpg" alt="" className="img-fluid"/>
@@ -59,9 +59,9 @@ function Departments() {
                                 <div className="tab-pane" id="tab-3">
                                     <div className="row gy-4">
                                         <div className="col-lg-8 details order-2 order-lg-1">
-                                            <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                                            <p className="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                                            <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                                        <h3 style={{marginBlock:20}}>Hepatology</h3>
+
+                                            <p> is a branch of medicine concerned with the study, prevention, diagnosis, and management of diseases that affect the liver, gallbladder, biliary tree, and pancreas. The term hepatology is derived from the Greek words “hepatikos” and “logia,” which mean liver and study, respectively.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-3.jpg" alt="" className="img-fluid"/>
@@ -71,9 +71,9 @@ function Departments() {
                                 <div className="tab-pane" id="tab-4">
                                     <div className="row gy-4">
                                         <div className="col-lg-8 details order-2 order-lg-1">
-                                            <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                                            <p className="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                                            <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                                        <h3 style={{marginBlock:20}}>Pediatrics</h3>
+
+                                            <p>is the branch of medicine dealing with the health and medical care of infants, children, and adolescents from birth up to the age of 18.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
                                             <img src="assets/img/departments-4.jpg" alt="" className="img-fluid"/>

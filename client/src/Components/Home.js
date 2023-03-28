@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Link } from 'react-router-dom';
 import PureBody from './PureBody';
 import admin from "../assets/admin.png";
 import doctor from "../assets/doctor_new.png";
@@ -11,6 +11,7 @@ import Reactangle2 from "../assets/images.jpg";
 import Well from "../assets/Well.png";
 import Error1 from '../assets/800X534-min 1.png';
 import Departments from './Departments';
+import SVG from '../assets/angle-down-solid.svg'
 // import Footer from "./Components/footer";
 function Home() {
     return (
@@ -27,15 +28,27 @@ function Home() {
                             <li><a href="#">about</a></li>
                             <li><a href="#">services</a></li>
                             <li><a href="signUp.html">signup</a></li>
-                            <img style={{ width: "10px", marginRight: 50 }} src={UserSolid} alt="" />
+                            <div class="dropdown">
+   <p className='flex' > Login</p>
+   <img src={SVG} id="drop-svg"/>
+  <div class="dropdown-content">
+    <a href="#">For Patients</a>
+    <a href="#">For Doctors</a>
+    <a href="#">For Admin</a>
+  </div>
+</div>   
                         </ul>
+                    
+
+ 
+
                     </section>
                 </nav>
                 <main className="flex mains" >
                     <div className="mainleft container" style={{ display: "flex", flexDirection: 'column' }}>
                         <h1>CHOOSE YOUR<br /> OWN DOCTOR.</h1>
                         <p style={{ textAlign: 'left' }}>India’s Best Doctors and <br /> Hospitals are at Your Fingertips.</p>
-                        <button className="primary-button" href="loginPage.html">login</button>
+                        <Link to ="/patientLogin"><button className="primary-button">login</button></Link>
                     </div>
 
                     <div className="mainright ">
@@ -68,87 +81,7 @@ function Home() {
 
                 </main>
                 <hr className='hor2' />
-                <main className="services">
-
-                    <div className="servicestext">
-                        <h2 style={{ position: 'absolute', left: "50%" }}>services</h2>
-                    </div>
-
-                    <section id="testimonials">
-                        <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" >
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <h2 style={{ position: 'absolute', left: "48%" }}><em>Administrator</em> </h2>
-                                    <img className="testimonial-image" src={Reactangle2} link="/adminLogin" />
-                                    {/* <em>Administrator</em> */}
-                                    <div className="flex">
-                                        <div className="container">
-                                            <PureBody
-                                                link="/adminLogin" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item">
-                                    <h2 className="testimonial-text" style={{ textAlign: 'center' }}><em>Doctor</em></h2>
-                                    <img className="testimonial-image" src={Reactangle} />
-                                    {/* <em>Doctor</em> */}
-                                    <div className="flex">
-                                        <div className="container">
-                                            <PureBody
-                                                link="/doctorLogin" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item">
-                                    <h2 className="testimonial-text" style={{ textAlign: 'center' }}><em>Patient</em></h2>
-                                    <img className="testimonial-image" src={Reactangle1} />
-                                    {/* <em>Patient</em> */}
-                                    <div className="flex">
-                                        <div className="container">
-                                            <PureBody
-                                                link="/patientLogin" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
-
-
-                    </section>
-
-
-
-                    {/* <div className="flex">
-                    <div className="container">
-						<PureBody
-                            role="Admin"
-                            src={Reactangle2}
-                            link="/adminLogin" />
-
-						<PureBody
-							role="Doctor"
-							src={Reactangle}
-							link="/doctorLogin"
-						/>
-						<PureBody
-							role="Patient"
-							src={Reactangle1}
-							link="patientLogin"
-						/>
-					</div>
-                </div> */}
-
-                </main>
-
-
+                 
             </div>
             <Departments />
         </>
