@@ -12,42 +12,44 @@ import Well from "../assets/Well.png";
 import Error1 from '../assets/800X534-min 1.png';
 import Departments from './Departments';
 import SVG from '../assets/angle-down-solid.svg';
-import GUKH from '../assets/GUKH.png';
+import secondSlide from '../assets/secondSlide.png';
 // import Footer from "./Components/footer";
 function Home() {
     return (
         <>
             <div >
-                <nav className="flex container " style={{ margin: 10, justifyContent: 'right', maxWidth: '100%', backgroundColor: 'transparent',borderColor: 'transparent' }}>
+                <nav className="flex container " style={{ margin: 10, justifyContent: 'right', maxWidth: '100%', backgroundColor: 'transparent', borderColor: 'transparent' }}>
                     <section className="nav flex leftnav" style={{ margin: 10 }} >
                         <img src={Well} alt="logo" style={{ position: 'absolute', width: 150, left: 70 }} />
                     </section>
 
-                    <section className="nav" style={{ marginTop: 10, marginLeft: 50,backgroundColor:'transparent', borderColor: 'transparent' }}>
-                        <ul className="flex" style={{ height: '3rem' }}>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="signUp.html">signup</a></li>
-                            <div className="dropdown">
-                                <p className='flex' > Login</p>
-                                <img src={SVG} id="drop-svg" />
-                                <div className="dropdown-content">
-                                    <a href="#">For Patients</a>
-                                    <a href="#">For Doctors</a>
-                                    <a href="#">For Admin</a>
+                    <section className="nav" style={{ marginTop: 10, marginLeft: 50 }}>
+                        <section className="nav" style={{ marginTop: 10, marginLeft: 50, backgroundColor: 'transparent', borderColor: 'transparent' }}>
+                            <ul className="flex" style={{ height: '3rem' }}>
+                                <li><a href="#">home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="signUp.html">signup</a></li>
+                                <div class="dropdown" style={{ alignItems: 'center', justifyContent: 'center' }}>
+                                    <p className=' login-dropdown' style={{ marginTop: 20, fontSize: 23 }} > Login</p>
+                                    <div class="dropdown-content">
+                                        <a href="#">For Patients</a>
+                                        <a href="#">For Doctors</a>
+                                        <a href="#">For Admin</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </ul>
-
-
+                                <li>
+                                    <a href="signUp.html">signup</a>
+                                </li>
+                            </ul>
+                        </section>
                     </section>
                 </nav>
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner" style={{color:"black"}}>
+                    <div className="carousel-inner" style={{ color: "black" }}>
                         <div className="carousel-item active">
                             <img className='d-block w-100' src={Error1} style={{ height: '75vh' }} alt="doctor photo" />
-                            <div className="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column',color:"black" }}>
+                            <div className="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column', color: "black" }}>
                                 <h1>CHOOSE YOUR<br /> OWN DOCTOR.</h1>
                                 <p style={{ textAlign: 'center' }}>India’s Best Doctors and <br /> Hospitals are at Your Fingertips.</p>
                                 <Link to="/patientLogin">
@@ -57,21 +59,17 @@ function Home() {
                             </div>
                         </div>
                         <div className="carousel-item">
-                        <img className='d-block w-100' src={GUKH} style={{ height: '75vh' }} alt="doctor photo" />
-                            <div class="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column',color:"black" }}>
-                                <h5>Get first 5 Doctor Appointments for free</h5>
-                                <p>After that Charge of 100 Rupees per Appointment</p>
-                            </div>
+                            <img className='d-block w-100' src={secondSlide} style={{ height: '75vh' }} alt="doctor photo" />
                         </div>
                         <div className="carousel-item">
                             <img className='d-block w-100' src={Error1} style={{ height: '75vh' }} alt="doctor photo" />
                         </div>
                     </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style={{color:"black"}}>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style={{ color: "black" }}>
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Previous</span>
                     </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style={{color:"black"}}>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style={{ color: "black" }}>
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
                     </button>
