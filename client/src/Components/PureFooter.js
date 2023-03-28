@@ -3,10 +3,10 @@ import React from "react";
 
 function PureFooter() {
 	return (
-		<div className=" footer">
+		<div className=" footer" style={{backgroundColor:"transparent",borderColor:"transparent"}}>
 			<footer id="footer">
 				<div className="footer-top">
-					<div className="container">
+					<div className="">
 						<div className="row">
 
 							<div className="col-lg-3 col-md-6 footer-contact" style={{textAlign:"start"}}>

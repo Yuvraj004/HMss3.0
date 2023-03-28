@@ -27,7 +27,8 @@ function Home() {
                         <section className="nav" style={{ marginTop: 10, marginLeft: 50, backgroundColor: 'transparent', borderColor: 'transparent' }}>
                             <ul className="flex" style={{ height: '3rem' }}>
                                 <li><a href="#">home</a></li>
-                                <li><a href="#">about</a></li>
+                                <li><a href="#abt">about</a></li>
+                                <li><a href="#">Medicines</a></li>
                                 <li><a href="#">services</a></li>
                                 <li><a href="signUp.html">signup</a></li>
                                 <div class="dropdown" style={{ alignItems: 'center', justifyContent: 'center' }}>
@@ -75,7 +76,7 @@ function Home() {
                     </button>
                 </div>
                 <hr className='hor' />
-                <main className="aboutsection">
+                <main id="abt" className="aboutsection">
 
                     <div className="about container">
                         <h2>about us</h2>
