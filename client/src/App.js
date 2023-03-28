@@ -9,6 +9,7 @@ import doctor from "./assets/doctor_new.png";
 import EntryRoutes from "./Routes/entryRoutes";
 import PureBody from "./Components/PureBody";
 import PureFooter from "./Components/PureFooter";
+import Contact from "./Components/contact";
 import Home from "./Components/Home";
 import VacantBeds from "./Components/Hospitals/VacantBeds";
 function App() {
@@ -17,50 +18,6 @@ function App() {
 			
 			<Switch>
 				<Route exact path="/">
-					{/* <ul
-						style={{
-							display: "flex",
-							flexDirection: "row",
-							paddingTop: "20px",
-							marginTop: 0,
-							marginBottom: "0px",
-							paddingBottom: "30px",
-							backgroundColor: "#242526",
-							color: "white",
-						}}
-					>
-						<li
-							style={{
-								paddingTop: "10px",
-								flex: "1",
-								position: "absolute",
-							}}
-						>
-							Global Hospitals
-						</li>
-						<li style={{
-								paddingTop: "10px",
-								flex: "1",
-								position: "relative",
-								left:"-10px",
-								textAlignLast:"auto"
-							}}>
-							<Link to="/vacantBeds" style={{color:"white"}} type="button" className="btn btn-primary">
-								Vacant Beds
-							</Link>
-						</li>
-						<li
-							style={{
-								paddingTop: "10px",
-								flex: "1",
-								textAlign: "right",
-							}}
-						>
-							<Link style={{ color: "white" }} to="/signUp">
-								New User? Sign Up!!
-							</Link>
-						</li>
-					</ul> */}
 					<Home/>
 					{/* <div className="container">
 						<PureBody role="Admin" src={admin} link="/adminLogin" />
@@ -81,6 +38,7 @@ function App() {
 				
 				<EntryRoutes />
 			</Switch>
+			<Contact/>
 			<PureFooter /> 
 		</div>
 	);

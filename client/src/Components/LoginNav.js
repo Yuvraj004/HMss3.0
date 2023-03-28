@@ -8,23 +8,26 @@ export default function LoginNav({ msg }) {
 				<NavItem
 					style={{padding: "20px",fontSize: "20px"}}
 				>
+					<nav>
 					<Link
 						style={{ textDecoration: "none" }}
 						to="/"
 					>
 						Home
 					</Link>
-				</NavItem>
+				</nav>
+				 </NavItem>
 			</Nav>
 
 			{msg ? (
 				<></>
 			) : (
-				<NavbarText >
+				<nav>
 					<Link to="/signUp" >
 						New User? SignUp!!
 					</Link>
-				</NavbarText>
+				</nav>
+				
 			)}
 		</Navbar>
 		
