@@ -97,7 +97,7 @@ class GetPatientProfile extends Component {
 						</NavLink>
 					</NavItem>
 				</Nav>
-				<Row className="mt-4">
+				<Row className="mt-4" style={{position: "relative", left: "25rem"}}>
 					<Col>
 						<h1>Edit Profile</h1>
 						<Form>

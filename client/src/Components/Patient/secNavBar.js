@@ -23,10 +23,10 @@ class SecNavBar extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar style={{ backgroundColor: "#cadce8" ,height:"10%"}} dark expand="md">
+				<Navbar style={{ backgroundColor: "#F0EEED" ,height: 70}} dark expand="md">
 					<Nav className="mr-auto" navbar>
 						<NavItem>
-							<NavLink href="/" style={{fontSize:30}}>Home</NavLink>
+							<NavLink href="/" style={{fontSize:30, color: "#181823"}}>Home</NavLink>
 						</NavItem>
 					</Nav>
 					<NavbarText>

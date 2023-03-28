@@ -49,28 +49,28 @@ class GetDoctor extends React.Component {
 		return (
 			<div>
 				{this.props.msg ? (
-					<Nav tabs>
+					<Nav tabs className="nav-tabs">
 						<NavItem>
-							<NavLink active>
+							<NavLink active id="bw1">
 								<Link to="/patientLogin">Doctor List</Link>
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink>
+							<NavLink id="bw2">
 								<Link to="/patientLogin/bookAppointment">
 									Book Appointment
 								</Link>
 							</NavLink>
-						</NavItem>
+						</NavItem >
 						<NavItem>
-							<NavLink>
+							<NavLink id="bw3">
 								<Link to="/patientLogin/getPatientProfile">
 									Edit Profile
 								</Link>
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink>
+							<NavLink id="bw4">
 								<Link to="/patientLogin/patientAppointments">
 									View Appointments
 								</Link>
@@ -98,7 +98,7 @@ class GetDoctor extends React.Component {
 				<Row>
 					<Col className="mt-3">
 						<Input
-							style={{ display:"flex",width: "50%",alignContent:"center" }}
+							style={{ display:"flex",width: "50%",position: "relative", left: "25rem" }}
 							placeholder="Search..."
 							type="text"
 							onChange={(e) =>

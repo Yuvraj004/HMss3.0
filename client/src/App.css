@@ -491,9 +491,9 @@ height:10px;
 }
 
 .container {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
+  /* border: 1px solid lightgrey; */
   border-radius: 3px;
 }
 
@@ -548,6 +548,14 @@ span.price {
   background-color: #F5E9CF;
   color: #4D455D;
    
+}
+.nav-tabs{
+  position: relative;
+  left: -25rem;
+  border-width: 5px;
+}
+#bw1, #bw2, #bw3, #bw4{
+  border-width: 5px;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
