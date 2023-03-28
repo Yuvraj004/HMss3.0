@@ -35,7 +35,6 @@ function App() {
 						/>
 					</div> */}
 				</Route>
-				
 				<EntryRoutes />
 			</Switch>
 			<Contact/>

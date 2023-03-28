@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Admin from "../../assets/admin.png";
 import {
 	Table,
 	Nav,
@@ -107,22 +108,9 @@ class GetDoctor extends React.Component {
 								this.setState({ searchTerm: e.target.value })
 							}
 						/>
-						<Table
-							striped
-							style={{
-								width: "50%",
-								"box-shadow": "2px 2px 4px 4px #CCCCCC",
-								marginTop: "30px",
-							}}
+						<section id="doctors" className="doctors"
 						>
-							<thead>
-								<tr>
-									<th>Doctor Id</th>
-									<th>Doctor Name</th>
-									<th>Department</th>
-								</tr>
-							</thead>
-							<tbody>
+							<div className="container">
 								{typeof this.state.doctors != undefined ? (
 									this.state.doctors
 										.filter((doctor, index) => {
@@ -139,12 +127,23 @@ class GetDoctor extends React.Component {
 										})
 										.map((doctor, index) => {
 											return (
-												<tr>
-													<th scope="row">
-														{doctor.doctor_id}
-													</th>
-													<td>{doctor.doctor_name}</td>
-													<td>{doctor.department}</td>
+												<div className="row">
+													<div className="col-lg-6">
+														<div className="member d-flex align-items-start">
+															<div className="pic"><img src={Admin} className="img-fluid" />
+															</div>
+															<div className="member-info">
+																<h4>{doctor.doctor_name}</h4>
+																<span>{doctor.department}</span>
+															<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, nam. Possimus tempora impedit eius sequi? Quia at cum magni neque.</p>
+															</div>
+															
+															<div className="social">
+															</div>
+														</div>
+													</div>
+
+
 													{this.props.msg ? (
 														<h1></h1>
 													) : (
@@ -163,17 +162,17 @@ class GetDoctor extends React.Component {
 															</Button>
 														</td>
 													)}
-												</tr>
+												</div>
 											);
 										})
 								) : (
 									<h1>ok</h1>
 								)}
-							</tbody>
-						</Table>
+							</div>
+						</section>
 					</Col>
 				</Row>
-			</div>
+			</div >
 		);
 	}
 }
