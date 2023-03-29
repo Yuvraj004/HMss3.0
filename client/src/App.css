@@ -618,9 +618,10 @@ span.price {
 }
 
 .footerbg{
-  background-image: url(../src/assets/footerBg.jpg);
+  background-image: url(../src/assets/footerBg.jpeg);
   color: white;
-  background-repeat: no-repeat;
+  /* background-repeat: repeat-x; */
+  padding: 25px;
 
 
   

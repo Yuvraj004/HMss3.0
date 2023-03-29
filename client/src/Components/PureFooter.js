@@ -1,6 +1,6 @@
 
 import React from "react";
-import bg from "../assets/footerBg.jpg";
+import bg from "../assets/footerBg.jpeg";
 
 function PureFooter() {
 	return (
