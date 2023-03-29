@@ -124,7 +124,7 @@ class GetDoctor extends React.Component {
 										})
 										.map((doctor, index) => {
 											return (
-												<div className="row">
+												<div className="row" key={doctor._id}>
 													<div className="col-lg-8">
 														<div className="member d-flex align-items-start">
 															<div className="pic"><img src={Admin} className="img-fluid" />

@@ -4,15 +4,15 @@ function Departments() {
     return (
         <div>
             <section id="departments" className="departments">
-                <div className="Departcontainer">
+                <div className="dcontainer">
 
                     <div className="section-title" style={{marginBlock:30}}>
                         <h2 style={{marginBlock:20}}>Departments</h2>
                     </div>
 
                     <div className="row gy-4">
-                        <div className="col-lg-3">
-                            <ul className="nav nav-tabs flex-column">
+                        <div className="col-lg-3" style={{color:"black"}}>
+                            <ul className="nav flex-column">
                                 <li className="nav-item">
                                     <a className="nav-link active show" data-bs-toggle="tab" href="#tab-1" style={{color:"black"}}>Cardiology</a>
                                 </li>
@@ -34,7 +34,7 @@ function Departments() {
                             <div className="tab-content">
                                 <div className="tab-pane active show" id="tab-1">
                                     <div className="row gy-4">
-                                        <div className="col-lg-8 details order-2 order-lg-1" style={{textAlign:"start"}}>
+                                        <div className="col-lg-8 details order-2 order-lg-1" style={{textAlign:"center"}}>
                                             <h3 style={{marginBlock:20}}>Cardiology</h3>
                                             
                                             <p style={{marginBlock:20}}>Cardiology is a branch of medicine that deals with disorders of the heart and the cardiovascular system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease and electrophysiology.</p>
@@ -83,6 +83,7 @@ function Departments() {
                                 <div className="tab-pane" id="tab-5">
                                     <div className="row gy-4">
                                         <div className="col-lg-8 details order-2 order-lg-1">
+                                            <h3 style={{marginBlock:20}}>Eye Care</h3>
                                             <p>Everyone needs to have their eyesight tested to check for vision and eye problems. Children usually have vision screening in school or at their health care provider's office during a checkup. Adults may also get vision screenings during their checkups. But many adults need more than a vision screening. They need a comprehensive dilated eye exam.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
