@@ -1,11 +1,12 @@
 
 import React from "react";
+import bg from "../assets/footerBg.jpg";
 
 function PureFooter() {
 	return (
-		<div className=" footer" style={{backgroundColor:"transparent",borderColor:"transparent"}}>
+		<div className="footerbg" >
 			<footer id="footer">
-				<div className="footer-top">
+				<div className="footer-top"> 	
 					<div className="">
 						<div className="row">
 

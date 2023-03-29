@@ -74,7 +74,7 @@ a:hover {
   justify-content: space-evenly;
   margin-bottom: -20px;
   /* padding-top: 50px; */
-  background-color: #223c50;
+  /* background-color: #223c50; */
   color: white;
 }
 
@@ -360,11 +360,7 @@ nav section img {
 
 /* footer */
 
-footer {
-  background-color: var(--button-background);
-  /* color: var(--text-color); */
-  padding-block: 20px;
-}
+
 
 .hor {
   margin-top: 4rem;
@@ -610,4 +606,23 @@ span.price {
 .loader::after {
   content: " - Remember this";
   visibility: hidden;
+}
+
+#abtuss{
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 102vh;
+  background-image: url(../src/assets/aboutUs.jpg);
+  background-color: #fe6248;
+  margin-block: 60px;
+}
+
+.footerbg{
+  background-image: url(../src/assets/footerBg.jpg);
+  color: white;
+  background-repeat: no-repeat;
+
+
+  
+  
 }

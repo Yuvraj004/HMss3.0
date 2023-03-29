@@ -20,6 +20,7 @@ function App() {
 					<Home/>
 					{/* <div className="container">
 						<PureBody role="Admin" src={admin} link="/adminLogin" /> */}
+						
 				</Route>
 				<EntryRoutes />
 			</Switch>

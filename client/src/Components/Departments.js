@@ -4,7 +4,7 @@ function Departments() {
     return (
         <div>
             <section id="departments" className="departments">
-                <div className="dcontainer">
+                <div className="dcontainer" style={{backgroundColor:"#efa593",padding:"20px"}}>
 
                     <div className="section-title" style={{marginBlock:30}}>
                         <h2 style={{marginBlock:20}}>Departments</h2>

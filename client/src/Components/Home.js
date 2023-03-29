@@ -12,6 +12,7 @@ import Well from "../assets/Well.png";
 import firstSlide from '../assets/firstSlide.png';
 import Departments from './Departments';
 import Contact from "./contact";
+import abtuss from "../assets/aboutUs.jpg";
 
 import secondSlide from '../assets/secondSlide.png';
 import thirdSlide from '../assets/third slide.png';
@@ -78,8 +79,8 @@ function Home() {
                 <hr className='hor' />
                 <main id="abt" className="aboutsection">
 
-                    <div className="about container" style={{display: "block"}}>
-                        <h2>about us</h2>
+                    {/* <div className="about container" style={{display: "block"}}> */}
+                        {/* <h2>about us</h2>
                     </div>
 
                     <div className="abouttext container" style={{textAlign: 'left', display: "block"}}>
@@ -98,7 +99,11 @@ function Home() {
 
                             Thank you for choosing our hospital for your healthcare needs. We look forward to serving you and your family and helping you achieve optimal health and wellness. <br />
                         </p>
-                    </div>
+                    </div> */}
+
+
+                   <div id="abtuss"></div>
+
 
                 </main>
                 <hr className='hor2' />
