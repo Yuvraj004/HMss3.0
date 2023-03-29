@@ -51,7 +51,7 @@ function Home() {
                 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner" style={{ color: "black" }}>
                         <div className="carousel-item active">
-                            <img className='d-block w-100' src={firstSlide} style={{ height: '90vh' }} alt="doctor photo" />
+                            <img className='d-block w-100' src={firstSlide} style={{ height: '80vh' }} alt="doctor photo" />
                             <div className="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column', color: "black" }}>
                                 <Link to="/patientLogin" style={{align:'left'}}>
                                     <button className="primary-button btn-front">login</button>
@@ -60,7 +60,7 @@ function Home() {
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img className='d-block w-100' src={secondSlide} style={{ height: '75vh' }} alt="doctor photo" />
+                            <img className='d-block w-100' src={secondSlide} style={{ height: '80vh' }} alt="doctor photo" />
                         </div>
                         <div className="carousel-item">
                             <img className='d-block w-100' src={thirdSlide} style={{ height: '80vh' }} alt="doctor photo" />
@@ -78,12 +78,13 @@ function Home() {
                 <hr className='hor' />
                 <main id="abt" className="aboutsection">
 
-                    <div className="about container">
+                    <div className="about container" style={{display: "block"}}>
                         <h2>about us</h2>
                     </div>
 
-                    <div className="abouttext container">
-                        <p>Welcome to our hospital website! <br />
+                    <div className="abouttext container" style={{textAlign: 'left', display: "block"}}>
+                        <span className="ph">Welcome to our hospital website! </span>
+                        <p>    
 
                             We are a leading healthcare facility dedicated to providing exceptional medical care and services to our patients. Our hospital has a team of highly skilled and experienced medical professionals, including doctors, nurses, and support staff, who are committed to delivering the highest standard of care. <br />
 
