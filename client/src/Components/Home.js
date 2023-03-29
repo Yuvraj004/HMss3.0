@@ -35,7 +35,7 @@ function Home() {
                                 <li><a href="/payment">Medicines</a></li>
                                 <li><a href="#">services</a></li>
                                 <div class="dropdown" style={{ alignItems: 'center', justifyContent: 'center' }}>
-                                    <p className=' login-dropdown' style={{ marginTop: 20, fontSize: 23 }} > Login</p>
+                                    <p className='dropdown-toggle login-dropdown' style={{ marginTop: 20, fontSize: 23 }} > Login</p>
                                     <div class="dropdown-content">
                                         <a href="/patientLogin">For Patients</a>
                                         <a href="/doctorLogin">For Doctors</a>
