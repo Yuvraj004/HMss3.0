@@ -2,11 +2,13 @@ import React from 'react';
 
 function CheckoutForm() {
     return (
+
+        
         <div className="row">
             <div className="col-75">
                 <div className="container">
                     <form action="/action_page.php">
-
+                    <div class="loader flex" style={{justifyContent: "center" , alignItems: "center"}}> </div>
                         <div className="row">
                             <div className="col-50">
                                 <h3>Billing Address</h3>
