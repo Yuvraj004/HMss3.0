@@ -63,7 +63,7 @@ function Contact() {
                                     <div className="error-message"></div>
                                     <div className="sent-message">Your message has been sent. Thank you!</div>
                                 </div> */}
-                                <div className="primary-button"><button type="submit">Send Message</button></div>
+                                <div className="primary-button"><button type="submit" className="btn-contact" st>Send Message</button></div>
                             </form>
 
                         </div>

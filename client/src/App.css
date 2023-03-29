@@ -544,7 +544,19 @@ span.price {
   border-radius: 20px;
   border: none;
 }
+.btn-contact{
+  background-color: 	#F16767;
+  border-radius: 20px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
 .btn-front:hover{
+  background-color: #F5E9CF;
+  color: #4D455D;
+   
+}
+.btn-contact:hover{
   background-color: #F5E9CF;
   color: #4D455D;
    
