@@ -132,10 +132,8 @@ class GetDoctor extends React.Component {
 															<div className="member-info">
 																<h4>{doctor.doctor_name}</h4>
 																<span>{doctor.department}</span>
-															<p style={{fontSize:"14px"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-															</div>
-															
-															<div className="social">
+															<p style={{fontSize:"14px"}}>Work Experience: 10 years</p>
+															<p><i className="fas fa-stars fa-3x "></i></p>
 															</div>
 														</div>
 													</div>
@@ -144,9 +142,9 @@ class GetDoctor extends React.Component {
 													{this.props.msg ? (
 														<h1></h1>
 													) : (
-														<td>
+														<div>
 															<Button
-																id={doctor.doctor_id}
+																id={doctor._id}
 																color="danger"
 																onClick={(e) =>
 																	this.handleDelete(
@@ -154,10 +152,9 @@ class GetDoctor extends React.Component {
 																			.id
 																	)
 																}
-															>
-																Delete
+															>Delete
 															</Button>
-														</td>
+														</div>
 													)}
 												</div>
 											);
