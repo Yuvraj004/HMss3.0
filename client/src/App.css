@@ -627,3 +627,12 @@ span.price {
   
   
 }
+
+
+.dcontainer{
+  background-image: url(./assets/deptbg.jpeg);
+  width: 100%;
+  background-repeat: round;
+
+}
+
