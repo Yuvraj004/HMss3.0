@@ -55,7 +55,7 @@ function Home() {
                             <img className='d-block w-100' src={firstSlide} style={{ height: '80vh' }} alt="doctor photo" />
                             <div className="carousel-caption d-none d-md-block" style={{ display: "flex", flexDirection: 'column', color: "black" }}>
                                 <Link to="/patientLogin" style={{align:'left'}}>
-                                    <button className="primary-button btn-front">login</button>
+                                    <button className="primary-button btn-front" id='btnlog' style={{color:"white",backgroundColor:"darkblue",borderRadius:'0'}}>login</button>
                                 </Link>
 
                             </div>

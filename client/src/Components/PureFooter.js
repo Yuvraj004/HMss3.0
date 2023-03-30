@@ -45,10 +45,10 @@ function PureFooter() {
 
 							<div className="col-lg-4 col-md-6 footer-newsletter">
 								<h4>Join Our Newsletter</h4>
-								<p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+								<p>Do join us for latest offers and updates!</p>
 								<form action="" method="post">
 									<input type="email" name="email" />
-									<input type="submit" value="Subscribe" />
+									<input type="submit" value="Subscribe" style={{color:"black"}}/>
 								</form>
 							</div>
 
