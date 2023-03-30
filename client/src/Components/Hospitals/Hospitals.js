@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-//hospitalsioapi_key=15d62492e08f1bd227a666db0bece6d391e3f3f3
 // const { Configuration, OpenAIApi } = require("openai");
 const axios = require('axios');
 function Hospitals() {
