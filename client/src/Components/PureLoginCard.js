@@ -6,6 +6,7 @@ function PureLoginCard({ src, msg }) {
 			style={{
 				flex: "1",
 				boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+				margin:"2rem",
 			}}
 		>
 			<img src={src} alt="Admin" />

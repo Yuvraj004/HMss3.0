@@ -3,7 +3,7 @@ import Cardio from '../assets/cardiology.jpg'
 import dbg from '../assets/deptbg.jpeg';
 function Departments() {
     return (
-        <div>
+        <div style={{width:"fit-content"}}>
             <section id="departments" className="departments">
                 <div className="dcontainer" style={{padding:"20px"}}>
 

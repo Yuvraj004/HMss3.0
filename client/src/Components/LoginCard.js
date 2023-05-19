@@ -2,7 +2,7 @@ import { Card, CardBody, CardImg, CardTitle, Col } from "reactstrap";
 
 export default function LoginCard({ src, msg }) {
 	return (
-		<Col sm="12" md="4">
+		<div style={{margin:"2rem",width:"500px"}}>
 			<Card style={{ "boxShadow": "4px 4px 4px 4px #CCCCCC" }}>
 				<CardImg top width="10%" src={src} alt="Card image cap" />
 				<CardBody>
@@ -11,6 +11,6 @@ export default function LoginCard({ src, msg }) {
 					</CardTitle>
 				</CardBody>
 			</Card>
-		</Col>
+		</div>
 	);
 }

@@ -39,7 +39,7 @@ class SignUp extends React.Component {
 	render() {
 		return (
 			<div>
-				<Form style={{ marginTop: "25px" }}>
+				<Form style={{ marginTop: "25px",marginRight:"25px" }}>
 					<FormGroup>
 						<Row>
 							<Col sm="2">
