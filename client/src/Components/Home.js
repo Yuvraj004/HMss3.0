@@ -274,7 +274,7 @@ function Home() {
               className="carousel-control-prev-icon"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden">Previous</span>
+            <span className="visually-hidden" style={{color:"blue",fontWeight:"bolder"}}>P</span>
           </button>
           <button
             className="carousel-control-next"
@@ -286,8 +286,9 @@ function Home() {
             <span
               className="carousel-control-next-icon"
               aria-hidden="true"
+              // style={{color:"blue",fontWeight:"bolder"}}
             ></span>
-            <span className="visually-hidden">Next</span>
+            <span className="visually-hidden" style={{color:"blue",fontWeight:"bolder"}}>N</span>
           </button>
         </div>
         <hr className="hor" />
