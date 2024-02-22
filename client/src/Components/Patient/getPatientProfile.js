@@ -33,7 +33,7 @@ class GetPatientProfile extends Component {
 		};
 		axios
 			.post(
-				"http://localhost:4000/patient/getProfile",
+				"http://localhost:4000/patient/patientList",
 				{
 					Id: this.props.patient_id,
 					Role: this.state.Role,

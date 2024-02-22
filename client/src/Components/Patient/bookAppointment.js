@@ -27,22 +27,54 @@ class BookAppointment extends React.Component {
 			Speciality: "",
 			Description: "",
 			Id: "",
+			selectedDoctor: "", // Add selectedDoctor state to store the selected doctor's name
 		};
 		this.inputRef = React.createRef();
 	}
+
+	// Function to request the backend to provide the doctor's ID by searching through the name
+    getDoctorIdByName = async (doctorName) => {
+        try {
+            const response = await axios.get(`http://localhost:4000/doctor/getDoctorIdByName/${doctorName}`);
+            return response.data.doctorId; // Assuming the backend returns the doctorId
+        } catch (error) {
+            console.error("Error fetching doctor ID:", error);
+            return null;
+        }
+    };
+
 	handleSubmit(e) {
+		e.preventDefault();
 		console.log(this.state);
+
+		// Search for the selected doctor's user ID based on their name
+		const selectedDoctorId = this.getDoctorIdByName(this.state.selectedDoctor);
+		
+		if (!selectedDoctorId) {
+            console.error("Failed to get doctor ID");
+            return;
+        }
+
+		// Prepare data to send to the backend
+		const appointmentData = {
+			...this.state,
+			doctorId: selectedDoctorId, // Add the doctor's user ID to the appointment data
+		};
+
 		const headers = {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.post("http://localhost:4000/appointment/appointmentList", this.state, {
+			.post("http://localhost:4000/appointment/appointmentList", appointmentData, {
 				headers: headers,
 			})
 			.then((res) => {
 				console.log(res);
 				alert(res.data);
-			});
+			}).catch((error) => {
+                console.error("Error making appointment:", error);
+                alert("Failed to make appointment. Please try again.");
+            });
 	}
 	// componentDidMount() {
 	// 	this.inputRef.current.focus();
@@ -84,13 +116,13 @@ class BookAppointment extends React.Component {
 
 							<div className="section-title">
 								<h2>Make an Appointment</h2>
-								<p>fjkhj</p>
+								<p>Patient</p>
 							</div>
 
-							<form action="forms/appointment.php" method="post" role="form" className="php-email-form">
+							<form role="form" className="php-email-form" onSubmit={this.handleSubmit.bind(this)}>
 								<div className="row">
 									<div className="col-md-4 form-group">
-										<input innerRef={this.inputRef} type="text" name="name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+										<input innerref={this.inputRef} type="text" name="name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
 											onChange={(e) => {
 												this.setState({ Name: e.target.value });
 											}} />
@@ -128,11 +160,16 @@ class BookAppointment extends React.Component {
 										<div className="validate"></div>
 									</div>
 									<div className="col-md-4 form-group mt-3">
-										<select name="doctor" id="doctor" className="form-select">
+										<select name="doctor" id="doctor" className="form-select"
+										value={this.state.selectedDoctor} // Bind the selected doctor's name to the state
+										onChange={(e) => {
+											this.setState({ selectedDoctor: e.target.value }); // Update the selectedDoctor state
+										}}>
 											<option value="">Select Doctor</option>
-											<option value="Doctor 1">Doctor 1</option>
-											<option value="Doctor 2">Doctor 2</option>
-											<option value="Doctor 3">Doctor 3</option>
+											<option value="Dr. Aarti Sabarwal">Dr. Aarti Sabarwal</option>
+											<option value="Dr. Winda Watson">Dr. Winda Watson</option>
+											<option value="Dr. Karina Cancer">Dr. Karina Cancer</option>
+											<option value="Dr. Suresh">Dr. Suresh</option>
 										</select>
 										<div className="validate"></div>
 									</div>
