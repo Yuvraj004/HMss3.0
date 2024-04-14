@@ -62,7 +62,26 @@ exports.editDocProfile = (req, res) => {
         }
     })
 }
+exports.addAptDoc = async(req, res) => {
+    const docID = req.body.doctorId;
+    const aptID = req.body.aptID;
 
+    try {
+        const doctor = await docModel.findById(docID);
+    
+        if (!doctor) {
+          return res.status(400).send("Invalid doctor ID");
+        }
+    
+        doctor.apt.push(appointmentId); // Add appointment ID to the doctor's appointments array
+        await doctor.save();
+    
+        res.send("Appointment added to doctor's profile successfully");
+      } catch (error) {
+        console.error("Error adding appointment to doctor profile:", error);
+        res.status(500).send("Error adding appointment");
+      }
+}
 exports.getDoctorIdByName = function (req, res) {
     const doctorName = req.params.name;
     console.log(doctorName)

@@ -18,6 +18,9 @@ const BookAppointment = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [appointmentId,setAptId] = useState(0);
+  const [doctorId,setDoctorId] = useState(0);
+
 
   const getDoctorIdByName = async (doctorName) => {
     try {
@@ -28,7 +31,24 @@ const BookAppointment = () => {
       return null;
     }
   };
+	const AddAppointmentToDoctor =async ({ doctorId, appointmentId }) => {
+		const [isAdding, setIsAdding] = useState(false);
+		setIsAdding(true);
+		setErrorMessage(null);
+		try {
+		const response = await axios.post('http://localhost:4000/doctor/aptUpdate', {
+			doctorId,
+			appointmentId,
+		});
 
+		console.log(response.data); // "Appointment added to doctor's profile successfully"
+		setIsAdding(false);
+		} catch (error) {
+		console.error("Error adding appointment to doctor:", error);
+		setIsAdding(false);
+		setErrorMessage(error.message || "An error occurred while adding the appointment.");
+		}
+	};
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -36,6 +56,7 @@ const BookAppointment = () => {
     setSuccessMessage("");
 
     const selectedDoctorId = await getDoctorIdByName(selectedDoctor);
+	setDoctorId(selectedDoctorId);
     if (!selectedDoctorId) {
       setErrorMessage("Failed to get doctor ID");
       setIsLoading(false);
@@ -62,7 +83,10 @@ const BookAppointment = () => {
         data: appointmentData,
       });
       console.log(response);
+	  const appointmentId = response.data.appointmentId;
+	  setAptId(appointmentId);
       setSuccessMessage("Your appointment request has been sent successfully. Thank you!");
+	  handleAddAppointment(doctorId,appointmentId);
     } catch (error) {
       console.error("Error creating appointment:", error);
       setErrorMessage("Failed to make appointment. Please try again.");

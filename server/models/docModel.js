@@ -26,7 +26,8 @@ const docSchema = new Schema({
         type: String,
     },
     apt:{
-        type:Object
+        type: [mongoose.Schema.Types.ObjectId],// Array to store appointment IDs (references)
+        ref: "appointmentModel",
     }
 })
 docSchema.plugin(autoIncrement.plugin, { model: "docModel", field: "doctor_id" })

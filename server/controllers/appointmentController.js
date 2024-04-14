@@ -10,7 +10,8 @@ exports.getAppoitments = (req, res) => {
         }
     })
 }
-exports.postAppointment = (req, res) => {
+exports.postAppointment = async (req, res) => {
+    if(req.body== null) res.status(400).send("NO data Received.");
     const Name = req.body.data.name.Name;
     const Email = req.body.data.email.Email;
     const Contact = req.body.data.contact.Contact;
@@ -21,14 +22,21 @@ exports.postAppointment = (req, res) => {
         Name,Email,Contact,Day,Description,DoctorId
     }
     const appointmentData = new appointmentModel(apt);
-    appointmentData.save((err) => {
-        if (!err) {
-            res.send("Appointment Inserted");
-        }
-        else {
-            res.send("Error in insertion");
-        }
-    })
+    const savedAppointment = await appointmentData.save();
+    try {
+        res.send({ appointmentId: savedAppointment._id });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error creating appointment");
+    }
+    // appointmentData.save((err) => {
+    //     if (!err) {
+    //         res.send("Appointment Inserted");
+    //     }
+    //     else {
+    //         res.send("Error in insertion");
+    //     }
+    // })
 
 }
 exports.postPrescription = (req, res) => {
