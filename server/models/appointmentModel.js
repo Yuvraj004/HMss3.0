@@ -3,27 +3,33 @@ const Schema = mongoose.Schema
 const autoIncrement = require("mongoose-auto-increment");
 autoIncrement.initialize(mongoose.connection);
 const appointmentSchema = new Schema({
-    appointment_id: {
-        type: Number,
-    },
-    doctor_id: {
+    
+    Name: {
         type: String,
     },
-    patient_name: {
+    Email: {
         type: String,
     },
-    description: {
+    Contact: {
         type: String,
     },
-    date: {
+    Description: {
         type: String,
     },
-    phone: {
+    Day: {
         type: String,
+    },
+    DoctorId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "docModel", // Reference the Doctor model name
     },
     prescription: {
         type: String,
-    }
+    },
+    appointment_id: {
+        type: Number,
+    },
+    
 })
 appointmentSchema.plugin(autoIncrement.plugin, { model: "appointmentModel", field: "appointment_id" })
 const appointmentModel = mongoose.model("appointmentModel", appointmentSchema);

@@ -21,8 +21,7 @@ app.use("/feedback", feedbackRouter);
 app.use("/appointment", appointmentRouter);
 app.use("/hlist",hospitalList);
 const mongoDB="mongodb+srv://yuvraj:xGKpZSGXitIz8aCX@hms2.n8td5pv.mongodb.net/?retryWrites=true&w=majority"
-// const uri = "mongodb+srv://yuvraj:anh67jxmFw07A0a3@hms2.n8td5pv.mongodb.net/?retryWrites=true&w=majority";
-// "mongodb+srv://yuvraj:xGKpZSGXitIz8aCX@cluster0.irtqldc.mongodb.net/?retryWrites=true&w=majority"
+
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
 if(db){ 

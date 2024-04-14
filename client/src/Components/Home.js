@@ -20,7 +20,6 @@ function Home() {
             margin: 10,
             justifyContent: "right",
             maxWidth: "100%",
-            backgroundColor: "transparent",
             borderColor: "transparent",
           }}
         >
@@ -28,7 +27,7 @@ function Home() {
             <img
               src={Well}
               alt="logo"
-              style={{ position: "absolute", width: 150, left: 70 }}
+              style={{backgroundColor:"transparent", position: "absolute", width: 150, left: 70 }}
             />
           </section>
 
@@ -47,24 +46,24 @@ function Home() {
             >
               <ul className="flex" style={{ height: "3rem" }}>
                 <li>
-                  <a href="#">home</a>
+                  <a className="NavBtn"  href="#">home</a>
                 </li>
                 <li>
-                  <a href="#abt">about</a>
+                  <a  className="NavBtn" href="#abt">about</a>
                 </li>
                 <li>
-                  <a href="/payment">Medicines</a>
+                  <a className="NavBtn" href="/payment">Medicines</a>
                 </li>
                 <li>
-                  <a href="#">services</a>
+                  <a className="NavBtn" href="#">services</a>
                 </li>
 
                 <li>
-                  <a href="signUp.html">signup</a>
+                  <a className="NavBtn" href="signUp.html">signup</a>
                 </li>
-                <div className="dropdown">
+                <div className="dropdown ">
                   <button
-                    className="dropdown-toggle"
+                    className="dropdown-toggle NavBtn"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -100,7 +99,7 @@ function Home() {
           </section>
           <div className="Navbar dropdown ">
             <a
-              className="dropdown-toggle"
+              className="dropdown-toggle NavBtn"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -113,13 +112,13 @@ function Home() {
               style={{ height: "3rem", backgroundColor: "white" }}
             >
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item NavBtn" href="#">
                   home
                 </a>
               </li>
               <li>
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item NavBtn "
                   style={{ backgroundColor: "white" }}
                   href="#abt"
                 >
@@ -128,7 +127,7 @@ function Home() {
               </li>
               <li>
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
                   href="/payment"
                 >
@@ -137,7 +136,7 @@ function Home() {
               </li>
               <li>
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
                   href="#"
                 >
@@ -147,7 +146,7 @@ function Home() {
 
               <li>
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
                   href="signUp.html"
                 >
@@ -158,7 +157,7 @@ function Home() {
           </div>
           <div className="Navbar dropdown">
             <button
-              className="dropdown-toggle"
+              className="dropdown-toggle NavBtn"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -174,7 +173,7 @@ function Home() {
             <ul className="dropdown-menu">
               <li>
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
                   href="/patientLogin"
                 >
@@ -183,7 +182,7 @@ function Home() {
               </li>
               <li>
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
                   href="/doctorLogin"
                 >
@@ -192,7 +191,7 @@ function Home() {
               </li>
               <li>
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
                   href="/adminLogin"
                 >
@@ -202,11 +201,13 @@ function Home() {
             </ul>
           </div>
         </nav>
+      </div>
+      <div className="homeSectionsDiv" >
         <div
           id="carouselExampleAutoplaying"
           className="carousel slide caaro"
           data-bs-ride="carousel"
-          style={{ width: "auto" }}
+          
         >
           <div className="carousel-inner" style={{ color: "black" }}>
             <div className="carousel-item active">
@@ -216,35 +217,6 @@ function Home() {
                 style={{ height: "80vh" }}
                 alt="doctor photo"
               />
-              <div
-                className="carousel-caption d-none d-md-block"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  color: "black",
-                  alignContent: "left",
-                  alignItems: "flex-start",
-                }}
-              >
-                <Link to="/patientLogin" style={{ align: "left" }}>
-                  <button
-                    className="btn btn-primary"
-                    id="btnlog"
-                    style={{
-                      color: "white",
-                      fontSize: "25px",
-                      backgroundColor: "darkblue",
-                      borderRadius: "10%",
-                      position: "relative",
-                      left: "-500px",
-                      bottom: "100px",
-                      fontWeight: "bolder",
-                    }}
-                  >
-                    LOGIN
-                  </button>
-                </Link>
-              </div>
             </div>
             <div className="carousel-item">
               <img
@@ -286,12 +258,10 @@ function Home() {
             <span
               className="carousel-control-next-icon"
               aria-hidden="true"
-              // style={{color:"blue",fontWeight:"bolder"}}
             ></span>
             <span className="visually-hidden" style={{color:"blue",fontWeight:"bolder"}}>N</span>
           </button>
         </div>
-        <hr className="hor" />
         <main id="abtuss" className="aboutsection">
           <h2 className="ph">about us</h2>
           <div className="abouttext container">
@@ -301,6 +271,7 @@ function Home() {
               hospital has a team of highly skilled and experienced medical
               professionals, including doctors, nurses, and support staff, who
               are committed to delivering the highest standard of care. <br />
+              <img className="imgMod" src={abtuss}></img>
               At our hospital, we believe in putting our patients first. We
               understand that each patient is unique, and we strive to provide
               personalized care that meets their individual needs. Our
@@ -313,6 +284,8 @@ function Home() {
               specialized clinics and departments for various medical
               specialties, including diabetes management, respiratory care, and
               physical therapy. <br />
+              <img className="imgMod" src={abtus1}></img>
+              <img className="imgMod" src={abtus3}></img>
               In addition to medical services, our hospital also offers a range
               of support services, including counseling and mental health
               services, nutrition counseling, and rehabilitation services. We
@@ -331,10 +304,7 @@ function Home() {
               achieve optimal health and wellness. <br />
             </p>
             <div>
-              <img src={abtuss}></img>
-              <img src={abtus1}></img>
-              <img src={abtus3}></img>
-              <img src={abtus2}></img>
+              <img className="imgMod" src={abtus2}></img>
             </div>
           </div>
         </main>

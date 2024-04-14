@@ -24,6 +24,9 @@ const docSchema = new Schema({
     },
     address: {
         type: String,
+    },
+    apt:{
+        type:Object
     }
 })
 docSchema.plugin(autoIncrement.plugin, { model: "docModel", field: "doctor_id" })

@@ -63,10 +63,10 @@ class GetDoctor extends React.Component {
 							</NavLink>
 						</NavItem >
 						<NavItem>
-							<NavLink id="bw3">
-								<Link to="/patientLogin/getPatientProfile">
+							<NavLink id="bw3" to="/patientLogin/getPatientProfile">
+								{/* <Link to="/patientLogin/getPatientProfile"> */}
 									Edit Profile
-								</Link>
+								{/* </Link> */}
 							</NavLink>
 						</NavItem>
 						<NavItem>

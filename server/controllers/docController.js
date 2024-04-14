@@ -65,13 +65,14 @@ exports.editDocProfile = (req, res) => {
 
 exports.getDoctorIdByName = function (req, res) {
     const doctorName = req.params.name;
-    docModel.findOne({ doctor_name: doctorName }, function (err, doctor) {
+    console.log(doctorName)
+    docModel.find({ doctor_name: doctorName }, function (err, doctor) {
         if (err) {
             res.status(500).json({ error: 'Internal server error' });
         } else if (!doctor) {
             res.status(404).json({ error: 'Doctor not found' });
         } else {
-            res.status(200).json({ doctorId: doctor.doctor_id });
+            res.status(200).json({ doctorId: doctor[0]._id });
         }
     });
 }

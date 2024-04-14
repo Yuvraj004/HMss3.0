@@ -3,9 +3,14 @@
 
 body {
   overflow-x: hidden;
+  
 }
 
-
+nav{
+  background-color: #d0eaf0;
+  /* border-radius: 5%; */
+  padding: 20px;
+}
 .App {
   text-align: center;
 }
@@ -172,18 +177,13 @@ p {
 
 /*all button*/
 
-a {
-  text-decoration: none;
+/* a {
   display: inline-block;
   color: black;
-  /* transform: 0.2s ease-in-out; */
   font-size: 1.4rem;
   font-weight: 600;
-}
+} */
 
-a:hover {
-  color: pink;
-}
 /*all buttons*/
 .link {
   text-decoration: none;
@@ -322,21 +322,37 @@ nav section img {
 .mainleft {
   margin-left: 60px;
 }
+/* main */
 
 /*caaro*/
+.caaro{
+  border-radius: 5%;
+  margin: 30px;
+}
+.caaro img{
+  border-radius: 5%;
+}
+.caaro:hover{
+  top:-20px;
+  box-shadow: 2px #000;
+  width:85%;
+}
 @media screen and (max-width:768px) {
   .caaro{
     display:flex;
     align-items: center;
     align-content: center;
     width: 220px !important;
+    border-radius: 10%;
+    margin: 30px;
   }
   .caaro img{
     height: auto !important;
+    border-radius: 10%;
   }
 
 }
-
+/*caaro*/
 /* about */
 
 .aboutsection {
@@ -345,8 +361,17 @@ nav section img {
   color:white;
   display: flex;
   flex-direction: column;
+  width: 86%;
+  box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.3); 
+  transition:  box-shadow 0.5s ease-in-out;
+  border-radius: 5%;
+  margin: 30px;
 }
-
+.aboutsection:hover{
+  box-shadow: 2px #000;
+  width:88%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
 .about {
   margin-top: 120px;
   text-align: center;
@@ -357,6 +382,7 @@ nav section img {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+/* about */
 
 /* services */
 .services {
@@ -412,19 +438,6 @@ nav section img {
 
 /* footer */
 
-
-
-.hor {
-  /* margin-top: 1rem; */
-  position: absolute;
-  left: 45%;
-  border: none;
-  border-top: dotted;
-  width: 8%;
-  border-width: 10px;
-  border-color: #a6a6a4;
-  margin: 40px auto 40px auto;
-}
 .hor2 {
   margin-top: 0;
   position: absolute;
@@ -448,6 +461,34 @@ nav section img {
   width: 30%;
   border-radius: 100%;
   margin: 3rem;
+}
+.imgMod{
+  width: 200px !important;
+  height: 200px !important;
+}
+.NavBtn{
+  display: inline-block;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5%;
+  background: linear-gradient(to right, #80d0c7 50%, #d0eaf0 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .4s ease-out;
+}
+.NavBtn:hover{
+  color: white;
+  background-position: left bottom;
+}
+.homeSectionsDiv{
+  width: auto ;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  margin: 10px;
 }
 /* .carousel-item {
   /* padding: 0 5% 0 5%; */
@@ -675,7 +716,8 @@ span.price {
 
 .dcontainer{
   background-image: url(./assets/deptbg.jpeg);
-  width: 100%;
+  width: auto;
+  border-radius: 2%;
   background-repeat: round;
 
 }

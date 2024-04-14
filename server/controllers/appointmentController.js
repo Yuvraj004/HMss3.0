@@ -11,7 +11,16 @@ exports.getAppoitments = (req, res) => {
     })
 }
 exports.postAppointment = (req, res) => {
-    const appointmentData = new appointmentModel(req.body)
+    const Name = req.body.data.name.Name;
+    const Email = req.body.data.email.Email;
+    const Contact = req.body.data.contact.Contact;
+    const Day = req.body.data.day.Day;
+    const Description= req.body.data.description;
+    const DoctorId = req.body.data.doctorId;
+    const apt = {
+        Name,Email,Contact,Day,Description,DoctorId
+    }
+    const appointmentData = new appointmentModel(apt);
     appointmentData.save((err) => {
         if (!err) {
             res.send("Appointment Inserted");
