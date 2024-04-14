@@ -7,32 +7,32 @@ import {
 import Cookies from "js-cookie";
 
 const BookAppointment = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [contact, setContact] = useState("");
-  const [age, setAge] = useState("");
-  const [day, setDay] = useState("");
-  const [speciality, setSpeciality] = useState("");
-  const [description, setDescription] = useState("");
-  const [selectedDoctor, setSelectedDoctor] = useState(""); // Add state for selected doctor
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [appointmentId,setAptId] = useState(0);
-  const [doctorId,setDoctorId] = useState(0);
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [contact, setContact] = useState("");
+	const [day, setDay] = useState("");
+	const [department, setDepartment] = useState("");
+	const [description, setDescription] = useState("");
+	const [selectedDoctor, setSelectedDoctor] = useState(""); // Add state for selected doctor
+	const [isLoading, setIsLoading] = useState(false);
+	const [errorMessage, setErrorMessage] = useState("");
+	const [successMessage, setSuccessMessage] = useState("");
+	const [appointmentId,setAptId] = useState(0);
+	const [doctorId,setDoctorId] = useState(0);
+	const [isAdding, setIsAdding] = useState(false);
 
 
-  const getDoctorIdByName = async (doctorName) => {
-    try {
-      const response = await axios.get(`http://localhost:4000/doctor/getDoctorIdByName/${doctorName}`);
-      return response.data.doctorId;
-    } catch (error) {
-      console.error("Error fetching doctor ID:", error);
-      return null;
-    }
-  };
-	const AddAppointmentToDoctor =async ({ doctorId, appointmentId }) => {
-		const [isAdding, setIsAdding] = useState(false);
+	const getDoctorIdByName = async (doctorName) => {
+	try {
+		const response = await axios.get(`http://localhost:4000/doctor/getDoctorIdByName/${doctorName}`);
+		return response.data.doctorId;
+	} catch (error) {
+		console.error("Error fetching doctor ID:", error);
+		return null;
+	}
+	};
+	const AddAppointmentToDoctor =async () => {
+		
 		setIsAdding(true);
 		setErrorMessage(null);
 		try {
@@ -49,55 +49,50 @@ const BookAppointment = () => {
 		setErrorMessage(error.message || "An error occurred while adding the appointment.");
 		}
 	};
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setErrorMessage("");
-    setSuccessMessage("");
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setIsLoading(true);
+		setErrorMessage("");
+		setSuccessMessage("");
 
-    const selectedDoctorId = await getDoctorIdByName(selectedDoctor);
-	setDoctorId(selectedDoctorId);
-    if (!selectedDoctorId) {
-      setErrorMessage("Failed to get doctor ID");
-      setIsLoading(false);
-      return;
-    }
+		const selectedDoctorId = await getDoctorIdByName(selectedDoctor);
+		setDoctorId(selectedDoctorId);
+		if (!selectedDoctorId) {
+			setErrorMessage("Failed to get doctor ID");
+			setIsLoading(false);
+			return;
+		}
 
-    const appointmentData = {
-      name,
-      email,
-      contact,
-      day,
-      description,
-      doctorId: selectedDoctorId,
-    };
+		const appointmentData = {
+			name,
+			email,
+			contact,
+			day,
+			description,
+			department,
+			doctorId: selectedDoctorId,
+		};
 
-    const jsonData = JSON.stringify(appointmentData);
-    const headers = {
-      authorization: Cookies.get("token"),
-    };
+		const headers = {
+			authorization: Cookies.get("token"),
+		};
 
-    try {
-      const response = await axios.post("http://localhost:4000/appointment/createAppointment", {
-        headers,
-        data: appointmentData,
-      });
-      console.log(response);
-	  const appointmentId = response.data.appointmentId;
-	  setAptId(appointmentId);
-      setSuccessMessage("Your appointment request has been sent successfully. Thank you!");
-	  handleAddAppointment(doctorId,appointmentId);
-    } catch (error) {
-      console.error("Error creating appointment:", error);
-      setErrorMessage("Failed to make appointment. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-	// componentDidMount() {
-	// 	this.inputRef.current.focus();
-	// }
+		try {
+			const response = await axios.post("http://localhost:4000/appointment/createAppointment", {
+			headers,
+			data: appointmentData,
+			});
+			const appointmentId = response.data.appointmentId;
+			setAptId(appointmentId);
+			setSuccessMessage("Your appointment request has been sent successfully. Thank you!");
+			AddAppointmentToDoctor();
+		} catch (error) {
+			console.error("Error creating appointment:", error);
+			setErrorMessage("Failed to make appointment. Please try again.");
+		} finally {
+			setIsLoading(false);
+		}
+	};
 	
 	return (
 		<>
@@ -169,11 +164,14 @@ const BookAppointment = () => {
 									<div className="validate"></div>
 								</div>
 								<div className="col-md-4 form-group mt-3">
-									<select name="department" id="department" className="form-select">
+									<select name="department" id="department" className="form-select"
+									value={department} onChange={(e) =>{
+										setDepartment(e.target.value);
+									}}>
 										<option value="">Select Department</option>
-										<option value="Department 1">Neurosurgeon</option>
-										<option value="Department 2">Department 2</option>
-										<option value="Department 3">Department 3</option>
+										<option value="Neuro">Neurosurgeon</option>
+										<option value="Cardio">Cardiology</option>
+										<option value="Radio">Radiology</option>
 									</select>
 									<div className="validate"></div>
 								</div>

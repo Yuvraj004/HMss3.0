@@ -64,7 +64,9 @@ exports.editDocProfile = (req, res) => {
 }
 exports.addAptDoc = async(req, res) => {
     const docID = req.body.doctorId;
-    const aptID = req.body.aptID;
+    
+    const aptID = req.body.appointmentId;
+    console.log(req.body.appointmentId);
 
     try {
         const doctor = await docModel.findById(docID);
@@ -73,7 +75,7 @@ exports.addAptDoc = async(req, res) => {
           return res.status(400).send("Invalid doctor ID");
         }
     
-        doctor.apt.push(appointmentId); // Add appointment ID to the doctor's appointments array
+        doctor.apt.push(aptID); // Add appointment ID to the doctor's appointments array
         await doctor.save();
     
         res.send("Appointment added to doctor's profile successfully");
@@ -84,7 +86,6 @@ exports.addAptDoc = async(req, res) => {
 }
 exports.getDoctorIdByName = function (req, res) {
     const doctorName = req.params.name;
-    console.log(doctorName)
     docModel.find({ doctor_name: doctorName }, function (err, doctor) {
         if (err) {
             res.status(500).json({ error: 'Internal server error' });

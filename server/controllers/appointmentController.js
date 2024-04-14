@@ -16,10 +16,11 @@ exports.postAppointment = async (req, res) => {
     const Email = req.body.data.email.Email;
     const Contact = req.body.data.contact.Contact;
     const Day = req.body.data.day.Day;
-    const Description= req.body.data.description;
+    const Department = req.body.data.department;
+    const Description= req.body.data.description.Description;
     const DoctorId = req.body.data.doctorId;
     const apt = {
-        Name,Email,Contact,Day,Description,DoctorId
+        Name,Email,Contact,Day,Description,Department,DoctorId
     }
     const appointmentData = new appointmentModel(apt);
     const savedAppointment = await appointmentData.save();
@@ -29,14 +30,7 @@ exports.postAppointment = async (req, res) => {
         console.error(error);
         res.status(500).send("Error creating appointment");
     }
-    // appointmentData.save((err) => {
-    //     if (!err) {
-    //         res.send("Appointment Inserted");
-    //     }
-    //     else {
-    //         res.send("Error in insertion");
-    //     }
-    // })
+
 
 }
 exports.postPrescription = (req, res) => {
