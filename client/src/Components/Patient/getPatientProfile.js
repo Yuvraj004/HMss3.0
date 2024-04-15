@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button,Col,NavLink,Form,FormGroup,Input,Label,Nav,NavItem,Row} from "reactstrap";
+import PatientNav from "../patientNav";
 
 const GetPatientProfile = (props) => {
   const [patientData, setPatientData] = useState({
@@ -37,28 +38,7 @@ const GetPatientProfile = (props) => {
 	return (
 		<div style={{ display: "flex",flexDirection: "column",
 			justifyContent: "center",alignItems: "center",flexWrap: "nowrap"}}>
-			<Nav tabs>
-			<NavItem>
-				<NavLink>
-				<Link to="/patientLogin">Doctor List</Link>
-				</NavLink>
-			</NavItem>
-			<NavItem>
-				<NavLink>
-				<Link to="/patientLogin/bookAppointment">Book Appointment</Link>
-				</NavLink>
-			</NavItem>
-			<NavItem>
-				<NavLink active>
-				<Link to="/patientLogin/getPatientProfile">Edit Profile</Link>
-				</NavLink>
-			</NavItem>
-			<NavItem>
-				<NavLink>
-				<Link to="/patientLogin/patientAppointments">View Appointments</Link>
-				</NavLink>
-			</NavItem>
-			</Nav>
+			<PatientNav/>
 			<Row className="mt-4" >
 				<Col>
 					<h1>Edit Profile</h1>

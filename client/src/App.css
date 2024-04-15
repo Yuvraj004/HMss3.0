@@ -177,12 +177,12 @@ p {
 
 /*all button*/
 
-/* a {
-  display: inline-block;
-  color: black;
-  font-size: 1.4rem;
-  font-weight: 600;
-} */
+.patientNavDiv{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
 
 /*all buttons*/
 .link {
@@ -675,10 +675,6 @@ span.price {
 }
 
 
-
-
-
-
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
@@ -706,9 +702,6 @@ span.price {
   /* background-repeat: repeat-x; */
   padding: 25px;
 
-
-  
-  
 }
 
 

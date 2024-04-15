@@ -1,18 +1,10 @@
 import React from "react";
 import axios from "axios";
 import Admin from "../../assets/admin.png";
-import {
-	Table,
-	Nav,
-	NavItem,
-	NavLink,
-	Button,
-	Row,
-	Col,
-	Input,
-} from "reactstrap";
+import {Nav,NavItem,NavLink,Button,Row,Col,Input} from "reactstrap";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
+import PatientNav from "../patientNav";
 class GetDoctor extends React.Component {
 	constructor(props) {
 		super(props);
@@ -48,66 +40,11 @@ class GetDoctor extends React.Component {
 	render() {
 		return (
 			<div>
-				{this.props.msg ? (
-					<Nav tabs className="nav-tabs">
-						<NavItem>
-							<NavLink active id="bw1">
-								<Link to="/patientLogin">Doctor List</Link>
-							</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink id="bw2">
-								<Link to="/patientLogin/bookAppointment">
-									Book Appointment
-								</Link>
-							</NavLink>
-						</NavItem >
-						<NavItem>
-							<NavLink id="bw3" to="/patientLogin/getPatientProfile">
-								{/* <Link to="/patientLogin/getPatientProfile"> */}
-									Edit Profile
-								{/* </Link> */}
-							</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink id="bw4">
-								<Link to="/patientLogin/patientAppointments">
-									View Appointments
-								</Link>
-							</NavLink>
-						</NavItem>
-					</Nav>
-				) : (
-					<Nav tabs>
-						<NavItem>
-							<NavLink>
-								<Link to="/adminLogin/addDoctor">
-									Add Doctor
-								</Link>
-							</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink active>
-								<Link to="/adminLogin/doctorlist">
-									Doctor List
-								</Link>
-							</NavLink>
-						</NavItem>
-					</Nav>
-				)}
+				<PatientNav />
 				<Row>
 					<Col className="mt-3">
-						<Input
-							style={{ display:"flex",width: "50%",position: "relative", left: "25rem" }}
-							placeholder="Search..."
-							type="text"
-							onChange={(e) =>
-								this.setState({ searchTerm: e.target.value })
-							}
-						/>
-						<section id="doctors" className="doctors"
-						>
-							<div className="container" style={{marginLeft:"70px"}}>
+						<section id="doctors" className="doctors">
+							<div className="container">
 								{typeof this.state.doctors != undefined ? (
 									this.state.doctors
 										.filter((doctor, index) => {
@@ -126,7 +63,7 @@ class GetDoctor extends React.Component {
 											return (
 												<div className="row" key={doctor._id}>
 													<div className="col-lg-8">
-														<div className="member d-flex align-items-start">
+														<div className="member d-flex align-items-start flex-column">
 															<div className="pic"><img src={Admin} className="img-fluid" />
 															</div>
 															<div className="member-info">

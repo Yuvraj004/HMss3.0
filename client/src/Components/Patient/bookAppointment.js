@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import {
-    NavItem,NavLink,Nav
-} from "reactstrap";
+
 import Cookies from "js-cookie";
+import PatientNav from "../patientNav";
 
 const BookAppointment = () => {
 	const [name, setName] = useState("");
@@ -97,34 +96,7 @@ const BookAppointment = () => {
 	return (
 		<>
 			<div>
-				<Nav tabs>
-					<NavItem>
-						<NavLink>
-							<Link to="/patientLogin">Doctor List</Link>
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink active >
-							<Link to="/patientLogin/bookAppointment">
-								Book Appointment
-							</Link>
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink >
-							<Link to="/patientLogin/getPatientProfile">
-								Edit Profile
-							</Link>
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink >
-							<Link to="/patientLogin/patientAppointments">
-								View Appointments
-							</Link>
-						</NavLink>
-					</NavItem>
-				</Nav>
+				<PatientNav/>
 				<section id="appointment" className="appointment section-bg">
 					<div className="container">
 

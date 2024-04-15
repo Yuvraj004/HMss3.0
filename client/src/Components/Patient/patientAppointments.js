@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, NavItem, NavLink, Table } from "reactstrap";
 import Cookies from "js-cookie";
+import PatientNav from "../patientNav";
 class PatientAppointments extends Component {
 	constructor(props) {
 		super(props);
@@ -32,34 +33,7 @@ class PatientAppointments extends Component {
 	render() {
 		return (
 			<div>
-				<Nav tabs>
-					<NavItem>
-						<NavLink>
-							<Link to="/patientLogin">Doctor List</Link>
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
-							<Link to="/patientLogin/bookAppointment">
-								Book Appointment
-							</Link>
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
-							<Link to="/patientLogin/getPatientProfile">
-								Edit Profile
-							</Link>
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink active>
-							<Link to="/patientLogin/patientAppointments">
-								View Appointments
-							</Link>
-						</NavLink>
-					</NavItem>
-				</Nav>
+				<PatientNav/>
 				<Table>
 					<thead>
 						<th>Application Id</th>
