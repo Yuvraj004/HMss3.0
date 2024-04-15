@@ -22,7 +22,7 @@ class GetDoctor extends React.Component {
 			.get("http://localhost:4000/doctor/doctorList", { headers: headers })
 			.then((resp) => {
 				console.log("hi");
-				console.log(resp);
+				// console.log(resp);
 				this.setState({ doctors: resp.data });
 				// console.log(this.state.users);
 			});

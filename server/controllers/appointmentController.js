@@ -1,12 +1,13 @@
 const appointmentModel = require("../models/appointmentModel");
+const patientModel = require("../models/patientModel");
 exports.getAppoitments = (req, res) => {
-    console.log(req.params);
-    appointmentModel.find({ doctor_id: req.params.doctor_id }, (err, doc) => {
+    // console.log(req.params);
+    patientModel.findOne({ _id: req.params.patient_id }, (err, doc) => {
         if (!err) {
-            res.send(doc);
+            res.send(doc).status(200);
         }
         else {
-            res.send(err);
+            res.send(err).status(400);
         }
     })
 }

@@ -1,62 +1,59 @@
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Nav, NavItem, NavLink, Table } from "reactstrap";
+import { Table } from "reactstrap";
 import Cookies from "js-cookie";
 import PatientNav from "../patientNav";
-class PatientAppointments extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			appointments: [],
-		};
-	}
-	async componentDidMount() {
-		const headers = {
-			authorization: Cookies.get("token"),
-		};
-		const id=Cookies.get("doctor_id")
-		await axios
-			.get(
-				`http://localhost:4000/appointment/appointmentList/${id}`,
-				{
-					Email: Cookies.get("patientEmail"),
-				},
-				{ headers: headers }
-			)
-			.then((res) => {
-				console.log(res);
-				this.setState({ appointments: res.data });
-			});
-		console.log(this.state);
-	}
-	render() {
-		return (
-			<div>
-				<PatientNav/>
-				<Table>
-					<thead>
-						<th>Application Id</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Prescription</th>
-					</thead>
-					<tbody>
-						{this.state.appointments.map((appointment) => {
-							return (
-								<tr>
-									<td>{appointment.Apid}</td>
-									<td>{appointment.Name}</td>
-									<td>{appointment.Email}</td>
-									<td>{appointment.Prescription}</td>
-								</tr>
-							);
-						})}
-					</tbody>
-				</Table>
-			</div>
-		);
-	}
-}
+
+const PatientAppointments = () => {
+  // Use useState to manage appointments state
+  const [appointments, setAppointments] = useState([]);
+
+  // Fetch appointments on component mount
+  useEffect(() => {
+    const headers = {
+      authorization: Cookies.get("token"),
+    };
+    const id = Cookies.get("patient_id");
+
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:4000/appointment/appointmentList/${id}`,
+          { headers: headers }
+        );
+        setAppointments(response.data);
+      } catch (error) {
+        // Handle errors here
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array ensures fetching data only on initial mount
+
+  return (
+    <div>
+      <PatientNav />
+      <Table>
+        <thead>
+          <th>Application Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Prescription</th>
+        </thead>
+        <tbody>
+          {/* {appointments && appointments.map((appointment) => ( */}
+            <tr key={appointments._id}>
+              <td>{appointments._id}</td>
+              <td>{appointments.patient_name}</td>
+              <td>{appointments.email}</td>
+              <td>{appointments.prescription}</td>
+            </tr>
+          {/* ))} */}
+        </tbody>
+      </Table>
+    </div>
+  );
+};
 
 export default PatientAppointments;
