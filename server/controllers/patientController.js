@@ -17,7 +17,7 @@ exports.postPatient = (req, res) => {
     const patientData = new patientModel(req.body);
     patientData.save((err) => {
         if (!err) {
-            res.send("Patient Inserted Sucessfully");
+            res.send("Patient Added Sucessfully").status(200);
         }
         else {
             res.send(err);

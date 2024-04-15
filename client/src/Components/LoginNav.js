@@ -3,10 +3,10 @@ import { Nav, Navbar, NavbarText, NavItem } from "reactstrap";
 
 export default function LoginNav({ msg }) {
 	return (
-		<Navbar style={{ backgroundColor: "#fff" }} expand="md">
+		<Navbar style={{ backgroundColor: "#fff" }} >
 			<Nav className="mr-auto" navbar>
 				<NavItem
-					style={{padding: "20px",fontSize: "20px"}}
+					style={{fontSize: "20px"}}
 				>
 					<nav>
 					<Link

@@ -333,9 +333,9 @@ nav section img {
   border-radius: 5%;
 }
 .caaro:hover{
-  top:-20px;
+  top:-10px;
   box-shadow: 2px #000;
-  width:85%;
+  width:75%;
 }
 @media screen and (max-width:768px) {
   .caaro{
@@ -438,17 +438,6 @@ nav section img {
 
 /* footer */
 
-.hor2 {
-  margin-top: 0;
-  position: absolute;
-  left: 50%;
-  border: none;
-  border-top: dotted;
-  width: 8%;
-  border-width: 10px;
-  border-color: #a6a6a4;
-  margin: 40px auto 40px auto;
-}
 
 #testimonials {
   --background-image: linear-gradient(white, #419eba);
@@ -549,15 +538,6 @@ height:10px;
 }
 
 /* payment gateway */
-
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
 
 .col-25 {
   -ms-flex: 25%; /* IE10 */
@@ -712,4 +692,33 @@ span.price {
   background-repeat: round;
 
 }
+/* SignUp */
+.signUpPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.signUpAttributes{
+  display: flex !important;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .loginCardBox{
+    width: 300px !important;
+  }
+}
+
+@media (max-width:800px) {
+  .signUpPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+    align-items: center;
+  }
+}
+/* End SignUp */
 

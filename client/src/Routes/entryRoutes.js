@@ -23,8 +23,9 @@ export default function EntryRoutes() {
 				<PatientLogin />
 			</Route>
 			<Route path="/signUp">
+				
 				<LoginNav msg="signup" />
-				<Row mt="7">
+				<div className="signUpPage">
 					<LoginCard
 						src={doctor_login}
 						msg="Welcome to Global Hospitals"
@@ -33,7 +34,7 @@ export default function EntryRoutes() {
 						<h1>Sign Up</h1>
 						<SignUp />
 					</Col>
-				</Row>
+				</div>
 			</Route>
 			<Route path="/vacantBeds">
 				<VacantBeds/>

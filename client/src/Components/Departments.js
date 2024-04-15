@@ -1,6 +1,9 @@
 import React from 'react'
 import Cardio from '../assets/cardiology.jpg'
-import dbg from '../assets/deptbg.jpeg';
+import Neuro from '../assets/departments-2.jpg';
+import Hepto from "../assets/departments-3.webp" ;
+import Pedia from "../assets/departments-4.webp";
+import Eye from "../assets/departments-5.jpg" ;
 function Departments() {
     return (
         <div style={{width:"fit-content"}}>
@@ -11,9 +14,9 @@ function Departments() {
                         <h2 style={{marginBlock:20}}>Departments</h2>
                     </div>
 
-                    <div className="row gy-4">
+                    <div className="row gy-1">
                         <div className="col-lg-3" style={{color:"black"}}>
-                            <ul className="nav flex-column">
+                            <ul className="nav flex-column" style={{fontSize:"20px"}}>
                                 <li className="nav-item">
                                     <a className="nav-link active show" data-bs-toggle="tab" href="#tab-1" style={{color:"black"}}>Cardiology</a>
                                 </li>
@@ -31,10 +34,10 @@ function Departments() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-lg-9">
+                        <div className="col-lg-8">
                             <div className="tab-content">
                                 <div className="tab-pane active show" id="tab-1">
-                                    <div className="row gy-4">
+                                    <div className="row gy-1">
                                         <div className="col-lg-8 details order-2 order-lg-1" style={{textAlign:"center"}}>
                                             <h3 style={{marginBlock:20}}>Cardiology</h3>
                                             
@@ -46,49 +49,49 @@ function Departments() {
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tab-2">
-                                    <div className="row gy-4">
+                                    <div className="row gy-1">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                         <h3 style={{marginBlock:20}}>Neurology</h3>
  
                                             <p>Neurology, medical specialty concerned with the nervous system and its functional or organic disorders. Neurologists diagnose and treat diseases and disorders of the brain, spinal cord, and nerves.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
-                                            <img src="assets/img/departments-2.jpg" alt="" className="img-fluid"/>
+                                            <img src={Neuro} alt="" className="img-fluid"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tab-3">
-                                    <div className="row gy-4">
+                                    <div className="row gy-1">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                         <h3 style={{marginBlock:20}}>Hepatology</h3>
 
                                             <p> is a branch of medicine concerned with the study, prevention, diagnosis, and management of diseases that affect the liver, gallbladder, biliary tree, and pancreas. The term hepatology is derived from the Greek words “hepatikos” and “logia,” which mean liver and study, respectively.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
-                                            <img src="assets/img/departments-3.jpg" alt="" className="img-fluid"/>
+                                            <img src={Hepto} alt="" className="img-fluid"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tab-4">
-                                    <div className="row gy-4">
+                                    <div className="row gy-1">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                         <h3 style={{marginBlock:20}}>Pediatrics</h3>
 
                                             <p>is the branch of medicine dealing with the health and medical care of infants, children, and adolescents from birth up to the age of 18.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
-                                            <img src="assets/img/departments-4.jpg" alt="" className="img-fluid"/>
+                                            <img src={Pedia}alt="" className="img-fluid"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tab-5">
-                                    <div className="row gy-4">
+                                    <div className="row gy-1">
                                         <div className="col-lg-8 details order-2 order-lg-1">
                                             <h3 style={{marginBlock:20}}>Eye Care</h3>
                                             <p>Everyone needs to have their eyesight tested to check for vision and eye problems. Children usually have vision screening in school or at their health care provider's office during a checkup. Adults may also get vision screenings during their checkups. But many adults need more than a vision screening. They need a comprehensive dilated eye exam.</p>
                                         </div>
                                         <div className="col-lg-4 text-center order-1 order-lg-2">
-                                            <img src="assets/img/departments-5.jpg" alt="" className="img-fluid"/>
+                                            <img src={Eye} alt="" className="img-fluid"/>
                                         </div>
                                     </div>
                                 </div>

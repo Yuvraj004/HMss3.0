@@ -19,7 +19,7 @@ class SignUp extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	handleSubmit(e) {
-		console.log(this.state);
+		console.log(this.state.status);
 		const headers = {
 			authorization: Cookies.get("token"),
 		};
@@ -39,14 +39,15 @@ class SignUp extends React.Component {
 	render() {
 		return (
 			<div>
-				<Form style={{ marginTop: "25px",marginRight:"25px" }}>
+				<Form className="signUpAttributes" >
 					<FormGroup>
 						<Row>
 							<Col sm="2">
-								<Label>Name *</Label>
+								<Label for="name">Name *</Label>
 							</Col>
 							<Col sm="10">
 								<Input
+									id="name"
 									type="text"
 									onChange={(e) =>
 										this.setState({ patient_name: e.target.value })
@@ -85,9 +86,9 @@ class SignUp extends React.Component {
 									}
 								/>
 								<small>
-									(Must be atleast of length 8 with one
+									(Must be atleast of length 8, one
 									Uppercase,one Lowercase,a number and a
-									special character)
+									special char)
 								</small>
 							</Col>
 						</Row>
@@ -142,11 +143,12 @@ class SignUp extends React.Component {
 					<FormGroup>
 						<Row>
 							<Col sm="2">
-								<Label>Birthdate</Label>
+								<Label for="birthdate">Birthdate</Label>
 							</Col>
 							<Col sm="10">
 								<Input
-									type="text"
+									id="birthdate"
+									type="date"
 									onChange={(e) =>
 										this.setState({
 											birthdate: e.target.value,

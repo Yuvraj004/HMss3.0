@@ -55,11 +55,7 @@ function Home() {
                   <a className="NavBtn" href="/payment">Medicines</a>
                 </li>
                 <li>
-                  <a className="NavBtn" href="#">services</a>
-                </li>
-
-                <li>
-                  <a className="NavBtn" href="signUp.html">signup</a>
+                  <a className="NavBtn" href="/signUp">signup</a>
                 </li>
                 <div className="dropdown ">
                   <button
@@ -138,17 +134,7 @@ function Home() {
                 <a
                   className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
-                  href="#"
-                >
-                  services
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="dropdown-item NavBtn"
-                  style={{ backgroundColor: "white" }}
-                  href="signUp.html"
+                  href="/signUp"
                 >
                   signup
                 </a>
@@ -262,7 +248,7 @@ function Home() {
             <span className="visually-hidden" style={{color:"blue",fontWeight:"bolder"}}>N</span>
           </button>
         </div>
-        <main id="abtuss" className="aboutsection">
+        <main id="abt" className="aboutsection">
           <h2 className="ph">about us</h2>
           <div className="abouttext container">
             <p>
@@ -308,7 +294,6 @@ function Home() {
             </div>
           </div>
         </main>
-        <hr className="hor2" />
       </div>
       <Departments />
       <Contact />
