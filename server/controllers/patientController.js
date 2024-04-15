@@ -51,3 +51,28 @@ exports.login = async(req, res) => {
         }
     })
 }
+
+exports.editProfile  = async(req,res) => {
+    
+    
+    const { Id, name, email, address, phone } = req.body;
+    const updateData = {};
+   
+    if (name) updateData.name = name;
+    if (email) updateData.email = email;
+    if (address) updateData.address = address;
+    if (phone) updateData.phone = phone;
+
+    console.log(updateData);
+
+    patientModel.updateOne({_id: Id},{$set:updateData},
+        {returnOriginal: false}, async err =>{
+        if(err){
+            console.log(err)
+            res.send("Error occured").status(500);
+        }
+        else{
+            res.send("Profile Updated").status(200);
+        }
+    })
+}

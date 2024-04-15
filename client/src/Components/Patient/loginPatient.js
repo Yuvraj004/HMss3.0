@@ -27,37 +27,16 @@ class PatientLogin extends React.Component {
 
 	async handleSubmit(childEmail, childPswrd) {		
 		await this.setState({ email: childEmail, password: childPswrd });
-		axios.post("http://localhost:4000/patient/loginpatient", this.state).then((res) => {
-			console.log(res);
+		axios.post("http://localhost:4000/patient/loginpatient", this.state)
+		.then((res) => {
+			console.log(res.data);
 			if (res.data.token) {
-				// sessionStorage.setItem("token", res.data.token);
 				Cookies.set("token", res.data.token);
-				// sessionStorage.setItem("patientName", jwt(res.data.token).name);
 				Cookies.set("patientName", jwt(res.data.token).name);
-				// sessionStorage.setItem("patient_id", jwt(res.data.token).Id);
-				Cookies.set("patient_id", jwt(res.data.token).Id);
-				// sessionStorage.setItem("auth", jwt(res.data.token).auth);
-				Cookies.set("auth", jwt(res.data.token).auth);
+				Cookies.set("patient_id", jwt(res.data.token).id);
+				Cookies.set("auth", jwt(res.data.token).authorized);
+				// Cookies.set("patientEmail", res.data.email);
 
-				// 	sessionStorage.setItem(
-				// 		"patientName",
-				// 		res.data.patient_data.patient_name
-				// 	);
-				// sessionStorage.setItem("patientEmail", res.data.email)
-				Cookies.set("patientEmail", res.data.email);
-				// 	sessionStorage.setItem(
-				// 		"patientContact",
-				// 		res.data.patient_data.phone
-				// 	);
-				// 	sessionStorage.setItem(
-				// 		"patient_id",
-				// 		res.data.patient_data.patient_id
-				// 	);
-				// 	sessionStorage.setItem(
-				// 		"patient_email",
-				// 		res.data.patient_data.email
-				// 	);
-				// 	this.setState({ patientredirectReq: true });
 			} else {
 				console.log(res);
 				window.alert(res.data.message);
