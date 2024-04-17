@@ -1,9 +1,8 @@
 import React from "react";
 import axios from "axios";
 import Admin from "../../assets/admin.png";
-import {Nav,NavItem,NavLink,Button,Row,Col,Input} from "reactstrap";
+import {Button,Row,Col} from "reactstrap";
 import Cookies from "js-cookie";
-import { Link } from "react-router-dom";
 import PatientNav from "../patientNav";
 class GetDoctor extends React.Component {
 	constructor(props) {

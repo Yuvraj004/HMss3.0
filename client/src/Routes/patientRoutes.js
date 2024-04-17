@@ -1,5 +1,5 @@
 import { Route, Switch } from "react-router";
-import GetDoctor from "../Components/Doctor/getDoctor";
+import PatientLogin from "../Components/Patient/loginPatient";
 import BookAppointment from "../Components/Patient/bookAppointment";
 import GetPatientProfile from "../Components/Patient/getPatientProfile";
 import PatientAppointments from "../Components/Patient/patientAppointments";
@@ -8,7 +8,7 @@ export default function PatientRoutes() {
 	return (
 		<Switch>
 			<Route exact path="/patientLogin">
-				<GetDoctor msg="patient" />
+				<PatientLogin />
 			</Route>
 			<Route exact path="/patientLogin/bookAppointment">
 				<BookAppointment />

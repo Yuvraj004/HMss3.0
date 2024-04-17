@@ -117,15 +117,8 @@ a:hover {
   background-color: #000;
   color: white;
 }
-.DocForm {
-  margin-top: 200px;
-  margin-left: 200px;
-}
+
 @media (max-width: 760px) {
-  .DocForm {
-    margin-left: 0px;
-    margin-top: 50px;
-  }
 }
 .mynav a {
   color: white;
