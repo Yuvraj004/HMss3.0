@@ -21,6 +21,7 @@ class PatientLogin extends React.Component {
 			role: "patient",
 			patient_id: "",
 			error: "",
+
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
