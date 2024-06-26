@@ -10,7 +10,7 @@ const refreshController = require("./controllers/refreshController");
 const hospitalList = require("./routes/hospitalList");
 const app = express();
 const cors = require("cors");
-const PORT = 4000;
+const PORT = 4010;
 app.use(cors());
 app.use(express.json())
 app.use("/doctor", docRouter);
