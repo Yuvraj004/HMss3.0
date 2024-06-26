@@ -8,7 +8,7 @@ function Hospitals() {
         const lat = 28.621900; // User's latitude
         const lon = 77.277290; // User's longitude
 
-        await fetch("http://localhost:4000/hlist/hospitallist",{
+        await fetch("https://bk-hms.onrender.com/hlist/hospitallist",{
             method:"POST",
             body:{
                 lat,lon

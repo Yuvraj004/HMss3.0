@@ -24,7 +24,7 @@ class SignUp extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.post("http://localhost:4000/patient/patientList", this.state, {
+			.post("https://bk-hms.onrender.com/patient/patientList", this.state, {
 				headers: headers,
 			})
 			.then((res) => {

@@ -18,7 +18,7 @@ class GetDoctor extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.get("http://localhost:4000/doctor/doctorList", { headers: headers })
+			.get("https://bk-hms.onrender.com/doctor/doctorList", { headers: headers })
 			.then((resp) => {
 				console.log("hi");
 				// console.log(resp);
@@ -30,7 +30,7 @@ class GetDoctor extends React.Component {
 		console.log(id);
 
 		axios
-			.delete(`http://localhost:4000/doctor/deleteDoctor/${id}`)
+			.delete(`https://bk-hms.onrender.com/doctor/deleteDoctor/${id}`)
 			.then((res) => {
 				alert(res.data);
 				window.location.reload(false);

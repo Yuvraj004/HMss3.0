@@ -33,7 +33,7 @@ class GetDocProfile extends React.Component {
 		const id = this.props.id;
 		axios
 			.get(
-				`http://localhost:4000/doctor/profile/${id}`,
+				`https://bk-hms.onrender.com/doctor/profile/${id}`,
 
 				{ headers: headers }
 			)
@@ -54,7 +54,7 @@ class GetDocProfile extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.post("http://localhost:4000/doctor/profile", this.state, {
+			.post("https://bk-hms.onrender.com/doctor/profile", this.state, {
 				headers: headers,
 			})
 			.then((res) => {

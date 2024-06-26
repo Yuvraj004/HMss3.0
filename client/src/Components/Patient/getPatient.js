@@ -28,7 +28,7 @@ class GetPatient extends React.Component {
 		};
 
 		axios
-			.get("http://localhost:4000/patient/patientList", { headers: headers })
+			.get("https://bk-hms.onrender.com/patient/patientList", { headers: headers })
 			.then((res) => {
 				this.setState({ patients: res.data });
 				console.log(res);
@@ -38,7 +38,7 @@ class GetPatient extends React.Component {
 	handleDelete(id) {
 		console.log(id);
 		axios
-			.delete(`http://localhost:4000/patient/patientList/${id}`, {
+			.delete(`https://bk-hms.onrender.com/patient/patientList/${id}`, {
 				patient_id: id,
 			})
 			.then((res) => {

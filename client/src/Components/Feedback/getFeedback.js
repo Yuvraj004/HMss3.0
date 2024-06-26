@@ -14,7 +14,7 @@ class GetFeedBack extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.get("http://localhost:4000/feedback/feedbackList", { headers: headers })
+			.get("https://bk-hms.onrender.com/feedback/feedbackList", { headers: headers })
 			.then((res) => {
 				this.setState({ feedbacks: res.data });
 			});

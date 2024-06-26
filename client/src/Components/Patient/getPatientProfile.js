@@ -22,7 +22,7 @@ const GetPatientProfile = (props) => {
       authorization: Cookies.get("token"),
     };
     axios
-      .post("http://localhost:4000/patient/editProfile", patientData, {
+      .post("https://bk-hms.onrender.com/patient/editProfile", patientData, {
         headers: headers,
       })
       .then((res) => {

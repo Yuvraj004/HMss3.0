@@ -22,7 +22,7 @@ class AddDoctorForm extends React.Component {
 		};
 		console.log(this.state);
 		axios
-			.post("http://localhost:4000/doctor/DoctorList", this.state, {
+			.post("https://bk-hms.onrender.com/doctor/DoctorList", this.state, {
 				headers: headers,
 			})
 			.then((res) => {

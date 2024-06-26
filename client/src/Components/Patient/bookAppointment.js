@@ -23,7 +23,7 @@ const BookAppointment = () => {
 
 	const getDoctorIdByName = async (doctorName) => {
 	try {
-		const response = await axios.get(`http://localhost:4000/doctor/getDoctorIdByName/${doctorName}`);
+		const response = await axios.get(`https://bk-hms.onrender.com/doctor/getDoctorIdByName/${doctorName}`);
 		return response.data.doctorId;
 	} catch (error) {
 		console.error("Error fetching doctor ID:", error);
@@ -35,7 +35,7 @@ const BookAppointment = () => {
 		setIsAdding(true);
 		setErrorMessage(null);
 		try {
-		const response = await axios.post('http://localhost:4000/doctor/aptUpdate', {
+		const response = await axios.post('https://bk-hms.onrender.com/doctor/aptUpdate', {
 			doctorId,
 			appointmentId,
 		});
@@ -77,7 +77,7 @@ const BookAppointment = () => {
 		};
 
 		try {
-			const response = await axios.post("http://localhost:4000/appointment/createAppointment", {
+			const response = await axios.post("https://bk-hms.onrender.com/appointment/createAppointment", {
 			headers,
 			data: appointmentData,
 			});

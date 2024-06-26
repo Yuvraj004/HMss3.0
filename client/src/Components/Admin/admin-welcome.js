@@ -31,7 +31,7 @@ class AdminWelcome extends React.Component {
 	async handleSubmit(childEmail, childPswrd) {
 		await this.setState({ email: childEmail });
 		await this.setState({ password: childPswrd });
-		axios.post("http://localhost:4000/admin/Login", this.state).then((res) => {
+		axios.post("https://bk-hms.onrender.com/admin/Login", this.state).then((res) => {
 			console.log(res);
 
 			if (res.data.token) {
@@ -76,7 +76,7 @@ class AdminWelcome extends React.Component {
 
 		if (this.state.redirectToReq || Cookies.get("auth")) {
 			if (Cookies.get("exp") * 1000 < curr.getTime()) {
-				axios.post("http://localhost:4000/token", { token: Cookies.get("refreshtoken") }).then((res) => {
+				axios.post("https://bk-hms.onrender.com/token", { token: Cookies.get("refreshtoken") }).then((res) => {
 					console.log("This is refresh")
 					console.log(res);
 					Cookies.set("token", res.data.token);

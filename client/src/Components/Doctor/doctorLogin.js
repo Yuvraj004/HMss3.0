@@ -28,7 +28,7 @@ class DoctorLogin extends React.Component {
 	}
 	async handleSubmit(childEmail, childPswrd) {
 		await this.setState({ email: childEmail, password: childPswrd });
-		axios.post("http://localhost:4000/doctor/loginDoctor", this.state).then((res) => {
+		axios.post("https://bk-hms.onrender.com/doctor/loginDoctor", this.state).then((res) => {
 			console.log(res);
 			if (res.data.token) {
 				// sessionStorage.setItem("token", res.data.token);

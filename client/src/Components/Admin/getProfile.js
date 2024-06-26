@@ -21,7 +21,7 @@ class GetProfile extends React.Component {
 		console.log(this.props.id);
 		axios
 			.post(
-				"http://localhost:4000/admin/AdminList",
+				"https://bk-hms.onrender.com/admin/AdminList",
 				{
 					admin_id: this.props.id,
 
@@ -46,7 +46,7 @@ class GetProfile extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.post("http://localhost:4000/editProfile", this.state, {
+			.post("https://bk-hms.onrender.com/editProfile", this.state, {
 				headers: headers,
 			})
 			.then((res) => {

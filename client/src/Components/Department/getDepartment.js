@@ -25,7 +25,7 @@ class GetDepartment extends React.Component {
 			authorization: Cookies.get("token"),
 		};
 		axios
-			.get("http://localhost:4000/dept/deptList", { headers: headers })
+			.get("https://bk-hms.onrender.com/dept/deptList", { headers: headers })
 			.then((resp) => {
 				console.log(resp);
 				this.setState({ depts: resp.data });
@@ -39,7 +39,7 @@ class GetDepartment extends React.Component {
 		};
 		axios
 			.delete(
-				`http://localhost:4000/dept/deptList/${id}`,			
+				`https://bk-hms.onrender.com/dept/deptList/${id}`,			
 				{ headers: headers }
 			)
 			.then((res) => {

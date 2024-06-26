@@ -29,7 +29,7 @@ class GetAppointments extends React.Component {
 		};
 		axios
 			.get(
-				`http://localhost:4000/appointment/AppointmentList/${id}`,
+				`https://bk-hms.onrender.com/appointment/AppointmentList/${id}`,
 				{ headers: headers }
 			)
 			.then((res) => {
@@ -51,7 +51,7 @@ class GetAppointments extends React.Component {
 		console.log(appointment);
 		axios
 			.post(
-				"http://localhost:4000/appointment/addPrescription",
+				"https://bk-hms.onrender.com/appointment/addPrescription",
 				{
 					appointment_id: appointment.appointment_id,
 					prescription: this.state.prescription,
