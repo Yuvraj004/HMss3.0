@@ -20,16 +20,16 @@ app.use("/patient", patientRouter);
 app.use("/feedback", feedbackRouter);
 app.use("/appointment", appointmentRouter);
 app.use("/hlist",hospitalList);
-const mongoDB="mongodb+srv://yuvraj:xGKpZSGXitIz8aCX@hms2.n8td5pv.mongodb.net/?retryWrites=true&w=majority"
 
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection
-if(db){ 
-    console.log("Connected")
+require('dotenv').config();
+const mongoURI=process.env.MONGO_URI;
+
+const connectToMongo = async()=>{
+    mongoose.connect(mongoURI,()=>{
+        console.log("Connected to mongo Succesfully");
+    })
 }
-else{
-    console.log("Not connected")
-}
+connectToMongo();
 app.post("/token", refreshController.refreshToken);
 app.listen(PORT, () => { console.log(`Server running on ${PORT}`) });
 //username yuvrajchat
