@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Well from "../assets/Well.png";
 import firstSlide from "../assets/firstSlide.png";
 import Departments from "./Departments";
@@ -46,16 +46,16 @@ function Home() {
             >
               <ul className="flex" style={{ height: "3rem" }}>
                 <li>
-                  <a className="NavBtn"  href="#">home</a>
+                  <Link className="NavBtn"  to="#">home</Link>
                 </li>
                 <li>
-                  <a  className="NavBtn" href="#abt">about</a>
+                  <Link  className="NavBtn" to="#abt">about</Link>
                 </li>
                 <li>
-                  <a className="NavBtn" href="/payment">Medicines</a>
+                  <Link className="NavBtn" to="/payment">Medicines</Link>
                 </li>
                 <li>
-                  <a className="NavBtn" href="/signUp">signup</a>
+                  <Link className="NavBtn" to="/signUp">signup</Link>
                 </li>
                 <div className="dropdown ">
                   <button
@@ -74,19 +74,19 @@ function Home() {
                   </button>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="/patientLogin">
+                      <Link className="dropdown-item" to="/patientLogin">
                         For Patients
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/doctorLogin">
+                      <Link className="dropdown-item" to="/doctorLogin">
                         For Doctors
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/adminLogin">
+                      <Link className="dropdown-item" to="/adminLogin">
                         For Admin
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -94,50 +94,50 @@ function Home() {
             </section>
           </section>
           <div className="Navbar dropdown ">
-            <a
+            <Link
               className="dropdown-toggle NavBtn"
-              href="#"
+              to="#"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               Accessories
-            </a>
+            </Link>
             <ul
               className="dropdown-menu"
               style={{ height: "3rem", backgroundColor: "white" }}
             >
               <li>
-                <a className="dropdown-item NavBtn" href="#">
+                <Link className="dropdown-item NavBtn" to="/">
                   home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="dropdown-item NavBtn "
                   style={{ backgroundColor: "white" }}
-                  href="#abt"
+                  to="#abt"
                 >
                   about
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
-                  href="/payment"
+                  to="/payment"
                 >
                   Medicines
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
-                  href="/signUp"
+                  to="/signUp"
                 >
                   signup
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -158,31 +158,31 @@ function Home() {
             </button>
             <ul className="dropdown-menu">
               <li>
-                <a
+                <Link
                   className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
-                  href="/patientLogin"
+                  to="/patientLogin"
                 >
                   For Patients
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
-                  href="/doctorLogin"
+                  to="/doctorLogin"
                 >
                   For Doctors
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="dropdown-item NavBtn"
                   style={{ backgroundColor: "white" }}
-                  href="/adminLogin"
+                  to="/adminLogin"
                 >
                   For Admin
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -252,9 +252,9 @@ function Home() {
           <h2 className="ph">about us</h2>
           <div className="abouttext container">
             <p>
-              We are a leading healthcare facility dedicated to providing
+              We are Link leading healthcare facility dedicated to providing
               exceptional medical care and services to our patients. Our
-              hospital has a team of highly skilled and experienced medical
+              hospital has Link team of highly skilled and experienced medical
               professionals, including doctors, nurses, and support staff, who
               are committed to delivering the highest standard of care. <br />
               <img className="imgMod" src={abtuss}></img>
@@ -262,9 +262,9 @@ function Home() {
               understand that each patient is unique, and we strive to provide
               personalized care that meets their individual needs. Our
               state-of-the-art facilities and advanced medical technologies
-              enable us to diagnose and treat a wide range of medical conditions
+              enable us to diagnose and treat Link wide range of medical conditions
               with precision and accuracy. <br />
-              We offer a comprehensive range of medical services, including
+              We offer Link comprehensive range of medical services, including
               general medicine, surgery, pediatrics, obstetrics and gynecology,
               cardiology, oncology, neurology, and more. Our hospital also has
               specialized clinics and departments for various medical
@@ -272,13 +272,13 @@ function Home() {
               physical therapy. <br />
               <img className="imgMod" src={abtus1}></img>
               <img className="imgMod" src={abtus3}></img>
-              In addition to medical services, our hospital also offers a range
+              In addition to medical services, our hospital also offers Link range
               of support services, including counseling and mental health
               services, nutrition counseling, and rehabilitation services. We
               believe in treating the whole person, not just their medical
               condition, and our support services are designed to help our
               patients achieve optimal health and wellness. <br />
-              We are committed to providing a safe and comfortable environment
+              We are committed to providing Link safe and comfortable environment
               for our patients and their families. Our hospital has strict
               safety protocols in place to prevent the spread of infections and
               ensure that our patients receive the best possible care. We also
