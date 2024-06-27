@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import admin from "../assets/admin.png";
+
 function PureBody({ role, src, link }) {
 	return (
 		<div
