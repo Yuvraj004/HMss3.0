@@ -21,7 +21,7 @@ The Hospital Management System is a comprehensive web application designed to ma
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/hospital-management-system.git
+    git clone https://github.com/Yuvraj004/HMss3.0.git
     cd hospital-management-system
     ```
 
